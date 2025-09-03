@@ -1,4 +1,4 @@
-import { motion } from "framer-motion"
+import { motion, useInView } from "framer-motion"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
@@ -13,13 +13,16 @@ import {
   Edit3,
   Save
 } from "lucide-react"
-import { useState } from "react"
+import { useState, useRef } from "react"
 
 export default function Reflection() {
   const [isEditing, setIsEditing] = useState(false)
   const [personalReflection, setPersonalReflection] = useState(
     "This learning journey has been transformative, pushing me beyond my comfort zone and helping me develop both technical skills and problem-solving mindset. Each challenge has taught me something valuable about persistence, creativity, and the importance of continuous learning in technology."
   )
+  
+  const growthRef = useRef(null)
+  const isInView = useInView(growthRef, { once: true, amount: 0.3 })
 
   const growthAreas = [
     {
@@ -27,28 +30,28 @@ export default function Reflection() {
       title: "Technical Mastery",
       description: "Progressed from basic HTML/CSS to full-stack development",
       skills: ["React", "Node.js", "TypeScript", "PostgreSQL", "Git"],
-      improvement: "95%"
+      improvement: 95
     },
     {
       icon: Lightbulb,
       title: "Problem Solving",
       description: "Developed systematic approach to breaking down complex problems",
       skills: ["Debugging", "Algorithm Design", "System Architecture"],
-      improvement: "85%"
+      improvement: 85
     },
     {
       icon: Users,
       title: "Collaboration",
       description: "Enhanced ability to work effectively in team environments", 
       skills: ["Code Reviews", "Documentation", "Communication"],
-      improvement: "80%"
+      improvement: 80
     },
     {
       icon: TrendingUp,
       title: "Project Management",
       description: "Learned to manage timelines, scope, and deliverables effectively",
       skills: ["Planning", "Agile Methods", "Version Control"],
-      improvement: "75%"
+      improvement: 75
     }
   ]
 
@@ -101,8 +104,194 @@ export default function Reflection() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/30">
-      <div className="container mx-auto px-4 py-20">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/30 relative overflow-hidden">
+      {/* Partículas flotantes con desenfoque */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <motion.div
+          className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-br from-blue-400/25 to-purple-500/25 rounded-full blur-xl"
+          animate={{
+            rotate: [0, 360],
+            scale: [1, 1.4, 0.8, 1.2, 1],
+            x: [0, 30, -15, 25, 0],
+            y: [0, -20, 15, -10, 0]
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        
+        <motion.div
+          className="absolute top-40 right-20 w-16 h-16 bg-gradient-to-br from-green-400/30 to-teal-500/30 rounded-full blur-2xl"
+          animate={{
+            scale: [0.5, 1.8, 1, 0.7, 1.3, 0.5],
+            rotate: [180, 0, 360, 180],
+            x: [0, -25, 15, -35, 0],
+            y: [0, 25, -10, 30, 0]
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+        />
+
+        <motion.div
+          className="absolute bottom-40 left-1/4 w-12 h-28 bg-gradient-to-t from-pink-400/20 to-red-500/25 rounded-full blur-xl"
+          animate={{
+            rotate: [0, 180, 360],
+            scaleY: [1, 1.5, 0.6, 1.2, 1],
+            scaleX: [1, 0.8, 1.3, 1],
+            x: [0, 20, -15, 25, 0],
+            y: [0, -30, 10, -20, 0]
+          }}
+          transition={{
+            duration: 18,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+
+        <motion.div
+          className="absolute top-1/3 right-1/3 w-14 h-14 bg-gradient-to-br from-yellow-400/30 to-orange-500/30 rounded-full blur-2xl"
+          animate={{
+            rotate: [0, -360, -720],
+            scale: [1, 0.6, 1.6, 0.9, 1],
+            x: [0, 40, -20, 35, 0],
+            y: [0, 20, -30, 25, 0]
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "easeOut"
+          }}
+        />
+
+        <motion.div
+          className="absolute top-60 left-1/2 w-24 h-6 bg-gradient-to-r from-indigo-400/25 to-cyan-500/25 rounded-full blur-xl"
+          animate={{
+            rotate: [0, 90, 180, 270, 360],
+            scaleX: [1, 0.4, 1.8, 0.7, 1],
+            scaleY: [1, 1.5, 1, 1.3, 1],
+            x: [0, -50, 30, -40, 0],
+            y: [0, 40, -20, 35, 0]
+          }}
+          transition={{
+            duration: 16,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+
+        <motion.div
+          className="absolute bottom-20 right-10 w-18 h-18 bg-gradient-to-br from-purple-400/20 to-pink-500/25 rounded-full blur-2xl"
+          animate={{
+            scale: [0.8, 1.6, 1.1, 0.9, 0.8],
+            rotate: [45, 405, 225, 585, 45],
+            x: [0, -30, 20, -15, 0],
+            y: [0, 15, -25, 10, 0]
+          }}
+          transition={{
+            duration: 14,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+
+        <motion.div
+          className="absolute top-10 left-1/3 w-10 h-10 bg-gradient-to-br from-emerald-400/25 to-lime-500/30 rounded-full blur-xl"
+          animate={{
+            scale: [1.2, 0.6, 1.4, 0.8, 1.2],
+            rotate: [0, 270, 180, 450, 720],
+            x: [0, 25, -20, 30, 0],
+            y: [0, -15, 25, -5, 0]
+          }}
+          transition={{
+            duration: 11,
+            repeat: Infinity,
+            ease: "easeOut"
+          }}
+        />
+
+        <motion.div
+          className="absolute bottom-60 left-20 w-8 h-20 bg-gradient-to-t from-amber-400/20 to-yellow-500/25 rounded-full blur-xl"
+          animate={{
+            rotate: [90, 270, 450, 630, 810],
+            scaleY: [1, 1.4, 0.7, 1.1, 1],
+            scaleX: [1, 0.9, 1.2, 1],
+            x: [0, 15, -25, 10, 0],
+            y: [0, 20, -15, 30, 0]
+          }}
+          transition={{
+            duration: 13,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+
+        {/* Partículas adicionales más pequeñas */}
+        <motion.div
+          className="absolute top-32 right-1/4 w-6 h-6 bg-gradient-to-br from-rose-400/30 to-violet-500/30 rounded-full blur-lg"
+          animate={{
+            scale: [0.8, 1.3, 0.9, 1.1, 0.8],
+            x: [0, 15, -10, 20, 0],
+            y: [0, -10, 20, -15, 0]
+          }}
+          transition={{
+            duration: 9,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+
+        <motion.div
+          className="absolute bottom-32 right-1/3 w-8 h-8 bg-gradient-to-br from-cyan-400/25 to-blue-500/30 rounded-full blur-lg"
+          animate={{
+            rotate: [0, 180, 360],
+            scale: [1, 0.7, 1.2, 1],
+            x: [0, -20, 10, -15, 0],
+            y: [0, 25, -15, 20, 0]
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeOut"
+          }}
+        />
+
+        <motion.div
+          className="absolute top-72 left-10 w-5 h-15 bg-gradient-to-t from-orange-400/25 to-red-500/30 rounded-full blur-lg"
+          animate={{
+            rotate: [0, 270, 540],
+            scaleY: [1, 1.3, 0.8, 1],
+            x: [0, 20, -10, 0],
+            y: [0, -25, 15, 0]
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+
+        <motion.div
+          className="absolute top-1/4 left-2/3 w-7 h-7 bg-gradient-to-br from-lime-400/30 to-emerald-500/25 rounded-full blur-lg"
+          animate={{
+            scale: [1, 0.5, 1.4, 0.9, 1],
+            rotate: [0, 360, 180, 540],
+            x: [0, -15, 25, -10, 0],
+            y: [0, 30, -20, 15, 0]
+          }}
+          transition={{
+            duration: 14,
+            repeat: Infinity,
+            ease: "easeOut"
+          }}
+        />
+      </div>
+
+      <div className="container mx-auto px-4 py-20 relative z-10">
         
         {/* Header */}
         <motion.div
@@ -170,6 +359,7 @@ export default function Reflection() {
 
         {/* Growth Areas */}
         <motion.section
+          ref={growthRef}
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -194,13 +384,29 @@ export default function Reflection() {
                       <div className="flex-1">
                         <h3 className="text-xl font-semibold mb-1">{area.title}</h3>
                         <div className="flex items-center">
-                          <div className="flex-1 bg-secondary rounded-full h-2 mr-3">
-                            <div 
-                              className="bg-primary h-2 rounded-full transition-all duration-1000 ease-out"
-                              style={{ width: area.improvement }}
+                          <div className="flex-1 bg-secondary rounded-full h-2 mr-3 overflow-hidden">
+                            <motion.div 
+                              className="bg-gradient-to-r from-primary to-primary/80 h-2 rounded-full"
+                              initial={{ width: 0 }}
+                              animate={isInView ? { width: `${area.improvement}%` } : { width: 0 }}
+                              transition={{ 
+                                duration: 2, 
+                                delay: 1 + index * 0.3,
+                                ease: "easeOut"
+                              }}
                             />
                           </div>
-                          <span className="text-sm font-medium text-primary">{area.improvement}</span>
+                          <motion.span 
+                            className="text-sm font-medium text-primary"
+                            initial={{ opacity: 0 }}
+                            animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+                            transition={{ 
+                              duration: 0.5, 
+                              delay: 1.5 + index * 0.3 
+                            }}
+                          >
+                            {area.improvement}%
+                          </motion.span>
                         </div>
                       </div>
                     </div>

@@ -215,8 +215,232 @@ export default function Resources() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/30">
-      <div className="container mx-auto px-4 py-20">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/30 relative overflow-hidden">
+      {/* Partículas flotantes con más colores vibrantes */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Partícula azul-púrpura grande */}
+        <motion.div
+          className="absolute top-20 left-10 w-24 h-24 bg-gradient-to-br from-blue-400/30 to-purple-600/30 rounded-full blur-xl"
+          animate={{
+            rotate: [0, 360],
+            scale: [1, 1.5, 0.7, 1.3, 1],
+            x: [0, 35, -20, 30, 0],
+            y: [0, -25, 20, -15, 0]
+          }}
+          transition={{
+            duration: 16,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        
+        {/* Partícula verde-teal mediana */}
+        <motion.div
+          className="absolute top-40 right-20 w-18 h-18 bg-gradient-to-br from-emerald-400/35 to-teal-600/35 rounded-full blur-2xl"
+          animate={{
+            scale: [0.6, 2, 1.1, 0.8, 1.4, 0.6],
+            rotate: [180, 0, 360, 180],
+            x: [0, -30, 20, -40, 0],
+            y: [0, 30, -15, 35, 0]
+          }}
+          transition={{
+            duration: 13,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+        />
+
+        {/* Partícula rosa-roja elíptica */}
+        <motion.div
+          className="absolute bottom-40 left-1/4 w-14 h-32 bg-gradient-to-t from-pink-500/25 to-red-600/30 rounded-full blur-xl"
+          animate={{
+            rotate: [0, 180, 360],
+            scaleY: [1, 1.6, 0.5, 1.3, 1],
+            scaleX: [1, 0.7, 1.4, 1],
+            x: [0, 25, -20, 30, 0],
+            y: [0, -35, 15, -25, 0]
+          }}
+          transition={{
+            duration: 19,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+
+        {/* Partícula amarillo-naranja */}
+        <motion.div
+          className="absolute top-1/3 right-1/3 w-16 h-16 bg-gradient-to-br from-yellow-400/35 to-orange-600/35 rounded-full blur-2xl"
+          animate={{
+            rotate: [0, -360, -720],
+            scale: [1, 0.5, 1.8, 0.9, 1],
+            x: [0, 45, -25, 40, 0],
+            y: [0, 25, -35, 30, 0]
+          }}
+          transition={{
+            duration: 21,
+            repeat: Infinity,
+            ease: "easeOut"
+          }}
+        />
+
+        {/* Partícula índigo-cian horizontal */}
+        <motion.div
+          className="absolute top-60 left-1/2 w-28 h-8 bg-gradient-to-r from-indigo-500/30 to-cyan-600/30 rounded-full blur-xl"
+          animate={{
+            rotate: [0, 90, 180, 270, 360],
+            scaleX: [1, 0.3, 2, 0.8, 1],
+            scaleY: [1, 1.6, 1, 1.4, 1],
+            x: [0, -55, 35, -45, 0],
+            y: [0, 45, -25, 40, 0]
+          }}
+          transition={{
+            duration: 17,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+
+        {/* Partícula violeta-magenta */}
+        <motion.div
+          className="absolute bottom-20 right-10 w-20 h-20 bg-gradient-to-br from-violet-500/25 to-fuchsia-600/30 rounded-full blur-2xl"
+          animate={{
+            scale: [0.7, 1.7, 1.2, 0.9, 0.7],
+            rotate: [50, 410, 230, 590, 50],
+            x: [0, -35, 25, -20, 0],
+            y: [0, 20, -30, 15, 0]
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+
+        {/* Partícula lime-verde brillante */}
+        <motion.div
+          className="absolute top-10 left-1/3 w-12 h-12 bg-gradient-to-br from-lime-400/30 to-emerald-600/35 rounded-full blur-xl"
+          animate={{
+            scale: [1.3, 0.5, 1.5, 0.8, 1.3],
+            rotate: [0, 300, 180, 480, 720],
+            x: [0, 30, -25, 35, 0],
+            y: [0, -20, 30, -10, 0]
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: "easeOut"
+          }}
+        />
+
+        {/* Partícula ámbar vertical */}
+        <motion.div
+          className="absolute bottom-60 left-20 w-10 h-24 bg-gradient-to-t from-amber-500/25 to-yellow-600/30 rounded-full blur-xl"
+          animate={{
+            rotate: [90, 270, 450, 630, 810],
+            scaleY: [1, 1.5, 0.6, 1.2, 1],
+            scaleX: [1, 0.8, 1.3, 1],
+            x: [0, 20, -30, 15, 0],
+            y: [0, 25, -20, 35, 0]
+          }}
+          transition={{
+            duration: 14,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+
+        {/* Partículas adicionales más vibrantes */}
+        <motion.div
+          className="absolute top-32 right-1/4 w-8 h-8 bg-gradient-to-br from-rose-500/35 to-pink-600/35 rounded-full blur-lg"
+          animate={{
+            scale: [0.9, 1.4, 1, 1.2, 0.9],
+            x: [0, 20, -15, 25, 0],
+            y: [0, -15, 25, -20, 0]
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+
+        <motion.div
+          className="absolute bottom-32 right-1/3 w-10 h-10 bg-gradient-to-br from-sky-500/30 to-blue-600/35 rounded-full blur-lg"
+          animate={{
+            rotate: [0, 180, 360],
+            scale: [1, 0.6, 1.3, 1],
+            x: [0, -25, 15, -20, 0],
+            y: [0, 30, -20, 25, 0]
+          }}
+          transition={{
+            duration: 11,
+            repeat: Infinity,
+            ease: "easeOut"
+          }}
+        />
+
+        <motion.div
+          className="absolute top-72 left-10 w-6 h-18 bg-gradient-to-t from-orange-500/30 to-red-600/35 rounded-full blur-lg"
+          animate={{
+            rotate: [0, 270, 540],
+            scaleY: [1, 1.4, 0.7, 1],
+            x: [0, 25, -15, 0],
+            y: [0, -30, 20, 0]
+          }}
+          transition={{
+            duration: 13,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+
+        <motion.div
+          className="absolute top-1/4 left-2/3 w-9 h-9 bg-gradient-to-br from-teal-500/35 to-cyan-600/35 rounded-full blur-lg"
+          animate={{
+            scale: [1, 0.4, 1.5, 0.9, 1],
+            rotate: [0, 360, 180, 540],
+            x: [0, -20, 30, -15, 0],
+            y: [0, 35, -25, 20, 0]
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "easeOut"
+          }}
+        />
+
+        {/* Partículas pequeñas dispersas con colores únicos */}
+        <motion.div
+          className="absolute top-1/2 right-16 w-5 h-5 bg-gradient-to-br from-indigo-600/40 to-purple-700/40 rounded-full blur-md"
+          animate={{
+            scale: [0.8, 1.2, 0.9, 1.1, 0.8],
+            x: [0, 12, -8, 15, 0],
+            y: [0, -8, 15, -12, 0]
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+
+        <motion.div
+          className="absolute bottom-1/4 left-1/2 w-7 h-7 bg-gradient-to-br from-green-600/35 to-lime-600/40 rounded-full blur-md"
+          animate={{
+            rotate: [0, 240, 480],
+            scale: [1.1, 0.7, 1.3, 1.1],
+            x: [0, -18, 22, 0],
+            y: [0, 28, -15, 0]
+          }}
+          transition={{
+            duration: 9,
+            repeat: Infinity,
+            ease: "easeOut"
+          }}
+        />
+      </div>
+
+      <div className="container mx-auto px-4 py-20 relative z-10">
         
         {/* Header */}
         <motion.div
