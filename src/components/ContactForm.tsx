@@ -80,16 +80,16 @@ export function ContactForm() {
       transition={{ duration: 0.8 }}
     >
       <Card className="card-elevated p-8">
-        <h3 className="text-2xl font-bold mb-6 text-gradient">Get In Touch</h3>
+        <h3 className="text-2xl font-bold mb-6 text-gradient">Hablemos</h3>
         
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
           <div className="grid md:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label htmlFor="name">Name</Label>
+              <Label htmlFor="name">Nombre</Label>
               <Input
                 id="name"
-                placeholder="Your full name"
-                {...register("name", { required: "Name is required" })}
+                placeholder="Tu nombre completo"
+                {...register("name", { required: "El nombre es obligatorio" })}
                 className={errors.name ? "border-destructive" : ""}
               />
               {errors.name && (
@@ -98,13 +98,13 @@ export function ContactForm() {
             </div>
             
             <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
+              <Label htmlFor="email">Correo</Label>
               <Input
                 id="email"
                 type="email"
-                placeholder="your.email@example.com"
+                placeholder="tu.email@ejemplo.com"
                 {...register("email", {
-                  required: "Email is required",
+                  required: "El correo es obligatorio",
                   pattern: {
                     value: /^\S+@\S+$/i,
                     message: "Invalid email address"
@@ -119,11 +119,11 @@ export function ContactForm() {
           </div>
           
           <div className="space-y-2">
-            <Label htmlFor="subject">Subject</Label>
+            <Label htmlFor="subject">Asunto</Label>
             <Input
               id="subject"
-              placeholder="What's this about?"
-              {...register("subject", { required: "Subject is required" })}
+              placeholder="¿Podría indicarme de qué se trata?"
+              {...register("subject", { required: "El asunto es obligatorio" })}
               className={errors.subject ? "border-destructive" : ""}
             />
             {errors.subject && (
@@ -132,12 +132,12 @@ export function ContactForm() {
           </div>
           
           <div className="space-y-2">
-            <Label htmlFor="message">Message</Label>
+            <Label htmlFor="message">Mensaje</Label>
             <Textarea
               id="message"
-              placeholder="Tell me about your project, question, or just say hello..."
+              placeholder="Cuéntame sobre tu proyecto, tu consulta o simplemente salúdame..."
               className={`min-h-[120px] resize-none ${errors.message ? "border-destructive" : ""}`}
-              {...register("message", { required: "Message is required" })}
+              {...register("message", { required: "El mensaje es obligatorio" })}
             />
             {errors.message && (
               <p className="text-sm text-destructive">{errors.message.message}</p>
@@ -147,16 +147,16 @@ export function ContactForm() {
           <Button
             type="submit"
             disabled={isSubmitting}
-            className="btn-primary w-full group"
+            className="btn-primary w-full group transition-all duration-300"
           >
             {isSubmitting ? (
               <>
                 <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2" />
-                Sending...
+                Enviando...
               </>
             ) : (
               <>
-                Send Message
+                Enviar Mensaje
                 <Send className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </>
             )}

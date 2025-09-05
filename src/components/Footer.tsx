@@ -5,21 +5,21 @@ export function Footer() {
   const socialLinks = [
     { 
       icon: Github, 
-      href: "https://github.com", 
+      href: "https://github.com/ISAASPWDI", 
       label: "GitHub",
-      username: "alexjohnson" 
+      username: "stevensaliaga" 
     },
     { 
       icon: Linkedin, 
-      href: "https://linkedin.com/in/alexjohnson", 
+      href: "https://www.linkedin.com/in/stevens-aliaga-arauco-05bb39226/", 
       label: "LinkedIn",
-      username: "Alex Johnson" 
+      username: "Stevens Aliaga" 
     },
     { 
       icon: Mail, 
-      href: "mailto:alex@example.com", 
+      href: "mailto:stivensaliaga@gmail.com", 
       label: "Email",
-      username: "alex@example.com" 
+      username: "stivensaliaga@gmail.com" 
     },
   ]
 
@@ -35,9 +35,9 @@ export function Footer() {
             transition={{ duration: 0.6 }}
             className="text-center md:text-left"
           >
-            <h3 className="text-2xl font-bold text-gradient mb-2">Alex Johnson</h3>
+            <h3 className="text-2xl font-bold text-gradient mb-2">Stevens Aliaga</h3>
             <p className="text-muted-foreground text-sm">
-              Full Stack Developer & Computer Science Student
+              Backend developer & System Engineer Student
             </p>
           </motion.div>
 
@@ -81,11 +81,11 @@ export function Footer() {
             className="text-center md:text-right"
           >
             <p className="text-muted-foreground text-sm flex items-center justify-center md:justify-end">
-              Made with <Heart className="h-4 w-4 mx-1 text-red-500" fill="currentColor" /> 
+              Made with love <Heart className="h-4 w-4 mx-1 text-red-500" fill="currentColor" /> 
               © {new Date().getFullYear()}
             </p>
             <p className="text-muted-foreground text-xs mt-1">
-              Built with React, TypeScript & Tailwind CSS
+              Hecho con TypeScript & Tailwind CSS
             </p>
           </motion.div>
         </div>

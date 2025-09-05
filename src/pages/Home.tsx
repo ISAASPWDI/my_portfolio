@@ -9,15 +9,40 @@ import pdf from "../../public/pdf 5.pdf"
 
 export default function Home() {
   const socialLinks = [
-    { icon: Github, href: "https://github.com", label: "GitHub" },
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: Mail, href: "mailto:contact@example.com", label: "Email" },
+    { icon: Github, href: "https://github.com/ISAASPWDI", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/stevens-aliaga-arauco-05bb39226/", label: "LinkedIn" },
+    { icon: Mail, href: "mailto:stivensaliaga@gmail.com", label: "Email" },
   ]
   const homeCards = [
-    { icon: GraduationCap, title: "Full Stack Development", description: "Creating end-to-end solutions" },
-    { icon: Briefcase, title: "Problem Solving", description: "Finding elegant solutions to complex challenges" },
-    { icon: MapPin, title: "Continuous Learning", description: "Always exploring new technologies" }
+    {
+      icon: GraduationCap,
+      title: "Educación",
+      items: [
+        { degree: "Ingeniería de Sistemas", description: "Universidad Nacional del Centro del Perú • 2021 - 2026" },
+        { degree: "Curso: Node.js de Cero a Experto", description: "Udemy • 2025" },
+        { degree: "Curso: Universidad Java", description: "Udemy • 2025" }
+      ]
+    },
+    {
+      icon: Briefcase,
+      title: "Experiencia",
+      items: [
+        { degree: "Practicante backend developer", description: "Tecnovedades Web • Ago 2024 – Ago 2025 (1 año)" },
+        { degree: "Practicante backend developer", description: "Holinsys • Feb 2022 – Oct 2022 (8 meses)" }
+      ]
+    },
+    {
+      icon: MapPin,
+      title: "Ubicación",
+      items: [
+        { degree: "Disponible para trabajar a nivel mundial" },
+        { description: "Abierto a oportunidades en remoto" },
+        { description: "Disponibilidad para reubicación si es necesario" }
+      ]
+    }
+
   ]
+
   return (
     <div className="hero-section overflow-hidden">
       <div className="container mx-auto px-4 lg:px-6">
@@ -36,17 +61,15 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="flex flex-col items-center lg:block"
             >
-              <h1 className="text-center lg:text-start text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4">
-                <span className="text-foreground">Hello, I'm</span>
-                <br />
-                <span className="text-foreground">Alex Johnson</span>
+              <h1 className="text-center text-foreground lg:text-start text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4">
+                Hola, Soy <br />
+                Stevens Aliaga
               </h1>
               <p className="text-center lg:text-start text-lg sm:text-xl lg:text-2xl text-muted-foreground mb-6 leading-relaxed">
-                Full Stack Developer & Computer Science Student
+                Backend developer & System Engineer Student
               </p>
               <p className=" text-center lg:text-start text-base lg:text-lg text-muted-foreground max-w-lg">
-                Passionate about creating innovative solutions and learning cutting-edge technologies.
-                Currently pursuing my Computer Science degree while building real-world applications.
+                Con una profunda pasión por mi carrera. Estoy constantemente en busca de nuevas oportunidades de aprendizaje y me entusiasma explorar tecnologías de vanguardia que me permitan innovar y superar desafíos.
               </p>
             </motion.div>
 
@@ -63,6 +86,7 @@ export default function Home() {
                   <motion.a
                     key={social.label}
                     href={social.href}
+                    target="_blank"
                     className="group relative p-2.5 lg:p-3 bg-card/60 hover:bg-primary/10 border border-border/50 rounded-xl transition-all duration-300 hover:scale-110"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
@@ -86,14 +110,14 @@ export default function Home() {
             >
               <Link to="/projects">
                 <Button className="btn-primary group transition-transform duration-500 w-full sm:w-auto">
-                  View My Work
+                  Ver mi trabajo
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" />
                 </Button>
               </Link>
               <a href="/pdf 5.pdf" download="mi-cv.pdf">
                 <Button variant="outline" className="btn-secondary hover:bg-primary/10 group transition-all duration-300 w-full sm:w-auto">
                   <Download className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform duration-500" />
-                  Download Resume
+                  Descargar CV
                 </Button>
               </a>
 
@@ -277,11 +301,11 @@ export default function Home() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 lg:gap-6 mb-16 lg:mb-20">
-          {homeCards.map((interest, index) => {
-            const Icon = interest.icon
+          {homeCards.map((card, index) => {
+            const Icon = card.icon
             return (
               <motion.div
-                key={interest.title}
+                key={card.title}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
@@ -291,8 +315,18 @@ export default function Home() {
                     <div className="inline-flex p-2.5 lg:p-3 bg-primary/10 rounded-xl mb-3 lg:mb-4 group-hover:bg-primary/20 transition-colors">
                       <Icon className="h-6 w-6 lg:h-8 lg:w-8 text-primary" />
                     </div>
-                    <h3 className="text-lg lg:text-xl font-semibold mb-2">{interest.title}</h3>
-                    <p className="text-sm lg:text-base text-muted-foreground">{interest.description}</p>
+                    <h3 className="text-2xl font-extrabold mb-2">{card.title}</h3>
+
+                    {card.items.map((item, i) => (
+                      <div key={i} className="mb-2">
+                        {item.degree && (
+                          <p className="font-semibold">{item.degree}</p>
+                        )}
+                        <p className="text-sm lg:text-base text-muted-foreground">
+                          {item.description}
+                        </p>
+                      </div>
+                    ))}
                   </div>
                 </Card>
               </motion.div>
@@ -300,18 +334,19 @@ export default function Home() {
           })}
         </div>
 
+
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
           className="mt-16 lg:mt-20 text-center"
         >
-          <p className="text-muted-foreground mb-6 lg:mb-8">Explore my journey through technology and learning</p>
+          <p className="text-muted-foreground mb-6 lg:mb-8">Explora mi trayectoria en la tecnología y el aprendizaje</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-6 max-w-3xl mx-auto">
             {[
-              { number: "50+", label: "Projects Completed" },
-              { number: "2+", label: "Years Experience" },
-              { number: "15+", label: "Technologies Learned" },
+              { number: "15+", label: "Projects Completed" },
+              { number: "1+", label: "Years Experience" },
+              { number: "10+", label: "Technologies Learned" },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -434,11 +469,9 @@ export default function Home() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 1.6 }}
               >
-                <h2 className="text-2xl lg:text-3xl font-bold mb-4 lg:mb-6 text-gradient">Let's Work Together</h2>
+                <h2 className="text-2xl lg:text-3xl font-bold mb-4 lg:mb-6 text-gradient">Trabajemos juntos</h2>
                 <p className="text-base lg:text-lg text-muted-foreground leading-relaxed mb-6 lg:mb-8">
-                  Ready to bring your ideas to life? I'm always excited to discuss new projects,
-                  collaborate on innovative solutions, or simply connect with fellow developers
-                  and potential employers.
+                  ¿Listo para dar vida a tus ideas? Siempre estoy entusiasmado por discutir nuevos proyectos, colaborar en soluciones innovadoras o simplemente conectar con otros desarrolladores y posibles empleadores.
                 </p>
               </motion.div>
 
@@ -455,37 +488,46 @@ export default function Home() {
                   transition={{ duration: 0.3 }}
                 >
                   <motion.div
-                    className="w-2 h-2 bg-green-500 rounded-full flex-shrink-0"
+                    className="w-2 h-2 bg-yellow-500 rounded-full flex-shrink-0"
                     animate={{ scale: [1, 1.2, 1] }}
                     transition={{ duration: 2, repeat: Infinity }}
                   />
-                  <span className="text-sm lg:text-base text-muted-foreground group-hover:text-foreground transition-colors">Available for full-time opportunities</span>
+                  <span className="text-sm lg:text-base text-muted-foreground group-hover:text-foreground transition-colors">
+                    Disponible para oportunidades de tiempo completo
+                  </span>
                 </motion.div>
+
                 <motion.div
                   className="flex items-center space-x-3 group"
                   whileHover={{ x: 5 }}
                   transition={{ duration: 0.3 }}
                 >
                   <motion.div
-                    className="w-2 h-2 bg-blue-500 rounded-full flex-shrink-0"
+                    className="w-2 h-2 bg-green-500 rounded-full flex-shrink-0"
                     animate={{ scale: [1, 1.2, 1] }}
                     transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
                   />
-                  <span className="text-sm lg:text-base text-muted-foreground group-hover:text-foreground transition-colors">Open to freelance projects</span>
+                  <span className="text-sm lg:text-base text-muted-foreground group-hover:text-foreground transition-colors">
+                    Comprometido con el aprendizaje continuo
+                  </span>
                 </motion.div>
+
                 <motion.div
                   className="flex items-center space-x-3 group"
                   whileHover={{ x: 5 }}
                   transition={{ duration: 0.3 }}
                 >
                   <motion.div
-                    className="w-2 h-2 bg-purple-500 rounded-full flex-shrink-0"
+                    className="w-2 h-2 bg-red-500 rounded-full flex-shrink-0"
                     animate={{ scale: [1, 1.2, 1] }}
                     transition={{ duration: 2, repeat: Infinity, delay: 1 }}
                   />
-                  <span className="text-sm lg:text-base text-muted-foreground group-hover:text-foreground transition-colors">Interested in mentorship opportunities</span>
+                  <span className="text-sm lg:text-base text-muted-foreground group-hover:text-foreground transition-colors">
+                    Orientado al trabajo en equipo y la innovación
+                  </span>
                 </motion.div>
               </motion.div>
+
 
               {/* Contact methods with icons */}
               <motion.div
@@ -507,8 +549,8 @@ export default function Home() {
                     <MessageCircle className="h-4 w-4 lg:h-5 lg:w-5 text-primary group-hover:text-primary transition-colors duration-300" />
                   </motion.div>
                   <div>
-                    <div className="font-medium text-xs lg:text-sm text-foreground">Quick Response</div>
-                    <div className="text-xs text-muted-foreground">Usually within 24h</div>
+                    <div className="font-medium text-xs lg:text-sm text-foreground">Respuesta rápida</div>
+                    <div className="text-xs text-muted-foreground">Normalmente en menos de 24 horas</div>
                   </div>
                 </motion.div>
 
@@ -528,8 +570,8 @@ export default function Home() {
                     <Mail className="h-4 w-4 lg:h-5 lg:w-5 text-primary group-hover:text-primary transition-colors duration-300" />
                   </motion.div>
                   <div>
-                    <div className="font-medium text-xs lg:text-sm text-foreground">Professional</div>
-                    <div className="text-xs text-muted-foreground">Detailed discussions</div>
+                    <div className="font-medium text-xs lg:text-sm text-foreground">Profesionalismo</div>
+                    <div className="text-xs text-muted-foreground">Comunicación clara y detallada</div>
                   </div>
                 </motion.div>
               </motion.div>
