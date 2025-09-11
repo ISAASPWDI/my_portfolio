@@ -10,8 +10,8 @@ export default function Notebook() {
   const [openWeeks, setOpenWeeks] = useState<string[]>(['week-1'])
 
   const toggleWeek = (weekId: string) => {
-    setOpenWeeks(prev => 
-      prev.includes(weekId) 
+    setOpenWeeks(prev =>
+      prev.includes(weekId)
         ? prev.filter(id => id !== weekId)
         : [...prev, weekId]
     )
@@ -21,94 +21,185 @@ export default function Notebook() {
     {
       id: 'week-1',
       week: 1,
-      title: "Introduction to React & Modern JavaScript",
-      date: "January 8-14, 2024",
+      title: "Fundamentos de Tecnologías Web",
+      date: "Enero 8-14, 2024",
       status: "Completed",
-      topics: ["React Fundamentals", "ES6+ Features", "Component Lifecycle", "JSX"],
+      topics: ["Sistemas Web", "Aplicaciones Web", "DNS y Protocolos", "Roles de Desarrollo", "Visual Studio Code"],
       learnings: [
-        "Mastered React component creation and props passing",
-        "Understanding of virtual DOM and its benefits", 
-        "Learned about ES6 destructuring, arrow functions, and template literals",
-        "Implemented first interactive components with state management"
+        "Diferencias entre sistema web, aplicación web, sitio web y página web",
+        "Comprensión del funcionamiento de DNS y protocolo TCP/IP",
+        "Entendimiento profundo del protocolo HTTP y su importancia",
+        "Roles clave: frontend, backend y fullstack developer",
+        "Dominio de Visual Studio Code como herramienta principal"
       ],
       exercises: [
-        "Built a todo list application with add/remove functionality",
-        "Created reusable button and card components",
-        "Implemented a simple counter with increment/decrement",
-        "Practiced component composition and data flow"
+        "Configuración completa del entorno de desarrollo con VSC",
+        "Instalación y configuración de extensiones esenciales",
+        "Práctica de atajos de teclado para mejorar productividad",
+        "Exploración de elementos de interfaz de usuario en VSC",
+        "Creación del primer proyecto web básico"
       ],
-      reflections: "This week opened my eyes to the power of component-based architecture. The concept of breaking down UI into reusable pieces feels natural and makes code much more maintainable. I'm excited to dive deeper into React patterns.",
-      challenges: "Initially struggled with understanding when to use state vs props, but practice helped clarify the distinction.",
-      nextGoals: ["Learn about React hooks", "Understand component lifecycle methods", "Practice more complex state management"]
+      reflections: "Esta semana sentó las bases fundamentales para entender cómo funciona la web. La comprensión de los protocolos y la arquitectura web me permitió visualizar el panorama completo del desarrollo web. Visual Studio Code se convirtió en mi herramienta indispensable.",
+      challenges: "Inicialmente fue abrumador entender todos los protocolos y conceptos técnicos, pero la práctica constante ayudó a consolidar el conocimiento.",
+      nextGoals: ["Dominar HTML5 y XML", "Comprender la estructura DOM", "Aprender sobre SEO básico"]
     },
     {
       id: 'week-2',
       week: 2,
-      title: "React Hooks & State Management",
-      date: "January 15-21, 2024", 
+      title: "HTML5, XML y CSS3 Fundamentals",
+      date: "Enero 15-21, 2024",
       status: "Completed",
-      topics: ["useState", "useEffect", "Custom Hooks", "Context API"],
+      topics: ["HTML5 Estructura", "XML Markup", "Árbol DOM", "CSS3 Sintaxis", "Diseño Responsivo", "SEO"],
       learnings: [
-        "Deep dive into useState for managing component state",
-        "Understanding useEffect for side effects and lifecycle management",
-        "Created custom hooks for reusable stateful logic",
-        "Learned Context API for avoiding prop drilling"
+        "Dominio de la estructura HTML5 y etiquetas semánticas principales",
+        "Comprensión del árbol DOM y proceso de renderizado",
+        "Sintaxis avanzada de CSS3 y sus nuevas características",
+        "Implementación de flexbox y grid layout para diseños complejos",
+        "Principios de SEO y compatibilidad entre navegadores",
+        "Diferencias entre display block, inline e inline-block"
       ],
       exercises: [
-        "Built a weather app with API integration using useEffect",
-        "Created custom hooks for form handling and data fetching",
-        "Implemented theme switching with Context API",
-        "Built a shopping cart with complex state management"
+        "Creación de páginas web semánticamente correctas con HTML5",
+        "Implementación de layouts flexibles con Flexbox",
+        "Desarrollo de diseños responsivos usando CSS Grid",
+        "Optimización básica para motores de búsqueda",
+        "Pruebas de compatibilidad en diferentes navegadores"
       ],
-      reflections: "Hooks have revolutionized how I think about React components. The ability to use state in functional components feels much cleaner than class components. Custom hooks are particularly powerful for code reuse.",
-      challenges: "useEffect dependencies array took time to master - understanding when effects run was tricky at first.",
-      nextGoals: ["Learn advanced hooks like useReducer", "Master performance optimization", "Explore testing strategies"]
+      reflections: "HTML y CSS dejaron de ser solo 'marcado y estilos' para convertirse en herramientas poderosas de estructuración y diseño. Flexbox y Grid revolucionaron mi forma de pensar los layouts, haciendo posible crear diseños que antes parecían imposibles.",
+      challenges: "Grid Layout fue inicialmente confuso, especialmente la nomenclatura de líneas y áreas, pero con práctica se volvió intuitivo.",
+      nextGoals: ["Explorar frameworks CSS como Bootstrap", "Profundizar en Tailwind CSS", "Mejorar habilidades de diseño responsivo"]
     },
     {
       id: 'week-3',
       week: 3,
-      title: "TypeScript & Advanced React Patterns",
-      date: "January 22-28, 2024",
-      status: "Completed", 
-      topics: ["TypeScript Basics", "Props Typing", "Generic Components", "Error Boundaries"],
+      title: "Frameworks CSS: Bootstrap y Tailwind",
+      date: "Enero 22-28, 2024",
+      status: "Completed",
+      topics: ["Bootstrap Layout", "Bootstrap Components", "Tailwind Utility-First", "Typography", "Flexbox Avanzado", "Application UI"],
       learnings: [
-        "Added type safety to React applications with TypeScript",
-        "Learned to type props, state, and event handlers properly",
-        "Understanding of generic components for reusability",
-        "Implemented error boundaries for better error handling"
+        "Sistema de grillas y componentes preconstruidos de Bootstrap",
+        "Filosofía utility-first de Tailwind CSS y sus ventajas",
+        "Tipografía avanzada: fonts, line-height, text styling",
+        "Manejo profesional de backgrounds, borders y effects",
+        "Sistema de espaciado consistente y responsive",
+        "Creación de interfaces complejas con elementos reutilizables"
       ],
       exercises: [
-        "Converted existing JavaScript projects to TypeScript",
-        "Built a type-safe form library with validation",
-        "Created generic data table component",
-        "Implemented error boundary wrapper components"
+        "Desarrollo completo de sitio web responsive con Bootstrap",
+        "Migración de proyecto Bootstrap a Tailwind CSS",
+        "Implementación de sistema de componentes UI consistente",
+        "Creación de avatars, badges, dropdowns y button groups",
+        "Desarrollo de layouts complejos con navigation y overlays"
       ],
-      reflections: "TypeScript initially felt overwhelming, but the benefits became clear quickly. The IDE support and compile-time error catching significantly improved my development experience and code quality.",
-      challenges: "Complex type definitions for higher-order components were challenging to understand initially.",
-      nextGoals: ["Learn advanced TypeScript patterns", "Explore React testing with Jest", "Study performance optimization techniques"]
+      reflections: "Los frameworks CSS transformaron mi flujo de trabajo completamente. Bootstrap me dio rapidez para prototipar, mientras que Tailwind me otorgó control granular sin escribir CSS personalizado. La práctica calificada consolidó estos conocimientos de manera práctica.",
+      challenges: "Adaptarme al paradigma utility-first de Tailwind requirió cambiar mi mentalidad, pero los resultados fueron extraordinarios en términos de mantenibilidad.",
+      nextGoals: ["Dominar JavaScript vanilla", "Aprender TypeScript básico", "Entender manipulación del DOM"]
     },
     {
       id: 'week-4',
       week: 4,
-      title: "Backend Development with Node.js",
-      date: "January 29 - February 4, 2024",
-      status: "In Progress",
-      topics: ["Express.js", "REST APIs", "Database Integration", "Authentication"],
+      title: "JavaScript y TypeScript Fundamentals",
+      date: "Enero 29 - Febrero 4, 2024",
+      status: "Completed",
+      topics: ["JavaScript Motores", "Variables y Operadores", "Funciones Avanzadas", "DOM Manipulation", "Canvas", "TypeScript Básico"],
       learnings: [
-        "Setting up Express.js server and middleware",
-        "Creating RESTful API endpoints", 
-        "Connecting to PostgreSQL database",
-        "Implementing JWT authentication"
+        "Funcionamiento interno de motores JavaScript y su optimización",
+        "Tipos de datos avanzados: Numbers, Strings, Objects y Booleans",
+        "Funciones: anónimas, arrow functions, closures y auto-invocadas",
+        "Manipulación dinámica del DOM con métodos y propiedades",
+        "Creación de animaciones y gráficos interactivos con Canvas",
+        "Introducción a TypeScript para tipado estático"
       ],
       exercises: [
-        "Built a complete blog API with CRUD operations",
-        "Implemented user registration and login system",
-        "Created middleware for authentication and error handling",
-        "Set up database migrations and seeding"
+        "Desarrollo de calculadora interactiva con JavaScript puro",
+        "Implementación de juego simple usando Canvas",
+        "Creación de animaciones fluidas y efectos visuales",
+        "Manipulación dinámica de estilos y elementos DOM",
+        "Conversión de código JavaScript a TypeScript"
       ],
-      reflections: "Moving to backend development has been exciting. Understanding how frontend and backend communicate through APIs gives me a complete picture of web development.",
-      challenges: "Database design and relationships require careful planning - made mistakes that needed refactoring.",
-      nextGoals: ["Learn about API security best practices", "Explore database optimization", "Study deployment strategies"]
+      reflections: "JavaScript se reveló como un lenguaje mucho más poderoso de lo que imaginaba. Las closures y funciones de orden superior abrieron nuevas posibilidades de programación. Canvas me permitió crear experiencias visuales impresionantes que combinan arte y código.",
+      challenges: "Los conceptos de closures y el contexto 'this' fueron inicialmente confusos, pero la práctica intensiva con el laboratorio de animación ayudó a clarificarlos.",
+      nextGoals: ["Aprender React framework", "Dominar JSX y componentes", "Entender Client Side Rendering"]
+    },
+    {
+      id: 'week-5',
+      week: 5,
+      title: "Framework JavaScript - React Fundamentals",
+      date: "Febrero 5-11, 2024",
+      status: "Completed",
+      topics: ["Client Side Rendering", "Componentes JSX", "Props y Children", "Gestión de Dependencias", "Estilos en React"],
+      learnings: [
+        "Arquitectura y operación de frameworks de Client Side Rendering",
+        "Desarrollo basado en componentes con JSX sintaxis",
+        "Sistema de props para comunicación entre componentes",
+        "Patrón children para composición flexible de componentes",
+        "Gestión moderna de dependencias con npm/yarn",
+        "Diferentes estrategias de estilos: inline, CSS modules, styled-components"
+      ],
+      exercises: [
+        "Configuración de proyecto React desde cero",
+        "Creación de biblioteca de componentes reutilizables",
+        "Implementación de paso de datos complejos con props",
+        "Desarrollo de layouts usando patrón children",
+        "Integración de múltiples sistemas de estilos en un proyecto"
+      ],
+      reflections: "React cambió completamente mi perspectiva sobre el desarrollo frontend. El pensamiento en componentes y la unidireccionalidad de datos crearon un paradigma mucho más predecible y mantenible. JSX, aunque extraño al principio, se volvió natural rápidamente.",
+      challenges: "Entender cuándo usar props vs children y cómo estructurar la jerarquía de componentes requirió mucha práctica y refactoring.",
+      nextGoals: ["Dominar eventos en React", "Aprender renderizado condicional", "Implementar consumo de APIs"]
+    },
+    {
+      id: 'week-6',
+      week: 6,
+      title: "React Avanzado: Eventos, APIs y Routing",
+      date: "Febrero 12-18, 2024",
+      status: "Completed",
+      topics: ["Eventos React", "Renderizado Condicional", "Renderizado Iterativo", "Formularios", "APIs", "Async/Await", "Axios"],
+      learnings: [
+        "Sistema de eventos sintéticos de React y event handling",
+        "Renderizado condicional para interfaces dinámicas",
+        "Renderizado de listas y manejo de keys únicas",
+        "Formularios controlados y no controlados en React",
+        "Consumo de APIs RESTful con fetch y Axios",
+        "Programación asíncrona con Promesas y async/await",
+        "Manejo de estados de carga y errores en peticiones"
+      ],
+      exercises: [
+        "Aplicación de gestión de tareas con CRUD completo",
+        "Implementación de formularios complejos con validación",
+        "Consumo de API pública para mostrar datos dinámicos",
+        "Sistema de filtrado y búsqueda en tiempo real",
+        "Manejo de estados de loading, error y éxito"
+      ],
+      reflections: "Esta semana fue un salto cuántico en mi comprensión de React. Combinar eventos, renderizado condicional y APIs me permitió crear aplicaciones realmente interactivas y útiles. Axios simplificó enormemente el trabajo con APIs comparado con fetch nativo.",
+      challenges: "Manejar los estados asíncronos y evitar race conditions fue complejo, especialmente cuando se combinaban múltiples llamadas a APIs.",
+      nextGoals: ["Dominar todos los hooks de React", "Crear hooks personalizados", "Prepararse para evaluación final"]
+    },
+    {
+      id: 'week-7',
+      week: 7,
+      title: "React Hooks y Evaluación Final",
+      date: "Febrero 19-25, 2024",
+      status: "In Progress",
+      topics: ["useState", "useEffect", "useContext", "useRef", "useReducer", "useCallback", "useMemo", "Custom Hooks"],
+      learnings: [
+        "useState para manejo de estado local en componentes funcionales",
+        "useEffect para efectos secundarios y ciclo de vida",
+        "useContext para compartir estado global sin prop drilling",
+        "useRef para referencias directas a elementos DOM",
+        "useReducer para estado complejo con acciones definidas",
+        "useCallback y useMemo para optimización de rendimiento",
+        "Creación de hooks personalizados para lógica reutilizable"
+      ],
+      exercises: [
+        "Refactoring de aplicaciones class-based a hooks",
+        "Implementación de sistema de autenticación con useContext",
+        "Creación de hooks personalizados para llamadas a APIs",
+        "Optimización de rendimiento con useCallback y useMemo",
+        "Desarrollo de aplicación completa usando todos los hooks"
+      ],
+      reflections: "Los hooks representan la evolución natural de React. Cada hook resuelve problemas específicos de manera elegante, y los hooks personalizados permiten abstraer lógica compleja en funciones reutilizables. Esta semana consolidó todo el conocimiento adquirido.",
+      challenges: "useReducer inicialmente parecía complejo comparado con useState, pero para estados complejos demostró ser mucho más claro y predecible.",
+      nextGoals: ["Aplicar conocimientos en proyecto final", "Explorar React avanzado", "Continuar con desarrollo fullstack"]
     }
   ]
 
@@ -139,7 +230,7 @@ export default function Notebook() {
             ease: "easeInOut"
           }}
         />
-        
+
         <motion.div
           className="absolute top-40 right-20 w-16 h-16 bg-gradient-to-br from-green-400/30 to-teal-500/30 rounded-full blur-2xl"
           animate={{
@@ -279,7 +370,7 @@ export default function Notebook() {
         />
       </div>
       <div className="container mx-auto px-4 py-20">
-        
+
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -288,12 +379,13 @@ export default function Notebook() {
           className="text-center mb-16"
         >
           <h1 className="text-5xl lg:text-6xl font-bold mb-6">
-            <span className="text-gradient">Learning Notebook</span>
+            <span className="text-gradient">Cuaderno</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            My weekly learning journey, documenting progress, insights, and reflections 
-            as I develop my skills in software development.
+            Mi viaje de aprendizaje semanal, documentando el progreso, ideas y reflexiones
+            mientras desarrollo mis habilidades en desarrollo de software.
           </p>
+
         </motion.div>
 
         {/* Learning Entries */}
@@ -304,16 +396,17 @@ export default function Notebook() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
+
             >
-              <Collapsible 
+              <Collapsible
                 open={openWeeks.includes(entry.id)}
                 onOpenChange={() => toggleWeek(entry.id)}
               >
-                <Card className="card-elevated overflow-hidden">
+                <Card className="card-elevated overflow-hidden p-5">
                   <CollapsibleTrigger asChild>
-                    <Button 
-                      variant="ghost" 
-                      className="w-full p-6 justify-between hover:bg-accent/50 rounded-none"
+                    <Button
+                      variant="ghost"
+                      className="w-full p-6 justify-between rounded-none hover:bg-transparent"
                     >
                       <div className="flex items-center space-x-4">
                         <div className="flex items-center space-x-3">
@@ -332,10 +425,10 @@ export default function Notebook() {
                       <ChevronDown className={`h-5 w-5 transition-transform ${openWeeks.includes(entry.id) ? 'rotate-180' : ''}`} />
                     </Button>
                   </CollapsibleTrigger>
-                  
+
                   <CollapsibleContent className="px-6 pb-6">
                     <div className="grid md:grid-cols-2 gap-6 mt-4">
-                      
+
                       {/* Topics Covered */}
                       <div className="space-y-4">
                         <div className="flex items-center space-x-2 mb-3">
@@ -389,7 +482,7 @@ export default function Notebook() {
                         <p className="text-sm text-muted-foreground leading-relaxed">
                           {entry.reflections}
                         </p>
-                        
+
                         {entry.challenges && (
                           <>
                             <h5 className="font-medium text-sm">Challenges</h5>
@@ -398,7 +491,7 @@ export default function Notebook() {
                             </p>
                           </>
                         )}
-                        
+
                         {entry.nextGoals && (
                           <>
                             <h5 className="font-medium text-sm">Next Week Goals</h5>
@@ -422,7 +515,7 @@ export default function Notebook() {
         </div>
 
         {/* Progress Summary */}
-        
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -430,30 +523,31 @@ export default function Notebook() {
           className="mt-16"
         >
           <Card className="card-elevated p-8 max-w-2xl mx-auto text-center">
-            <h3 className="text-2xl font-bold mb-4 text-gradient">Learning Progress</h3>
+            <h3 className="text-2xl font-bold mb-4 text-gradient">Progreso de Aprendizaje</h3>
             <div className="grid grid-cols-3 gap-4 mb-6">
               <div>
                 <div className="text-2xl font-bold text-primary">{learningEntries.filter(e => e.status === 'Completed').length}</div>
-                <div className="text-sm text-muted-foreground">Weeks Completed</div>
+                <div className="text-sm text-muted-foreground">Semanas Completadas</div>
               </div>
               <div>
                 <div className="text-2xl font-bold text-primary">{learningEntries.flatMap(e => e.topics).length}</div>
-                <div className="text-sm text-muted-foreground">Topics Learned</div>
+                <div className="text-sm text-muted-foreground">Temas Aprendidos</div>
               </div>
               <div>
                 <div className="text-2xl font-bold text-primary">{learningEntries.flatMap(e => e.exercises).length}</div>
-                <div className="text-sm text-muted-foreground">Exercises Done</div>
+                <div className="text-sm text-muted-foreground">Ejercicios Realizados</div>
               </div>
             </div>
             <p className="text-muted-foreground">
-              Each week brings new challenges and insights. This notebook captures my journey 
-              from beginner concepts to advanced development practices.
+              Cada semana trae nuevos desafíos y aprendizajes. Este cuaderno captura mi viaje
+              desde conceptos básicos hasta prácticas avanzadas de desarrollo.
             </p>
           </Card>
+
         </motion.div>
-        
+
       </div>
-      
+
     </div>
   )
 }
