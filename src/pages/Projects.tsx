@@ -9,7 +9,7 @@ export default function Projects() {
     {
       title: "E-Commerce Platform",
       description: "Full-stack web application with React, Node.js, and PostgreSQL. Features include user authentication, product catalog, shopping cart, and payment integration.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop",
+      image: "/images/projects/first.jpg",
       technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Tailwind CSS"],
       liveUrl: "https://example-ecommerce.com",
       githubUrl: "https://github.com/example/ecommerce",
@@ -19,7 +19,7 @@ export default function Projects() {
     {
       title: "Weather Dashboard",
       description: "Interactive weather application with real-time data, forecasts, and beautiful visualizations. Built with React and integrated with multiple weather APIs.",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=500&h=300&fit=crop",
+      image: "/images/projects/second.jpg",
       technologies: ["React", "TypeScript", "Chart.js", "Weather API", "CSS3"],
       liveUrl: "https://example-weather.com",
       githubUrl: "https://github.com/example/weather",
@@ -39,7 +39,7 @@ export default function Projects() {
     {
       title: "AI Chat Interface",
       description: "Modern chat interface with AI integration, real-time messaging, and beautiful UI. Currently being enhanced with advanced features.",
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500&h=300&fit=crop",
+      image: "/images/projects/little-projects.jpg",
       technologies: ["React", "OpenAI API", "WebSocket", "Framer Motion"],
       liveUrl: "#",
       githubUrl: "https://github.com/example/ai-chat",
@@ -599,14 +599,15 @@ export default function Projects() {
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="h-full"
               >
-                <Card className="card-elevated overflow-hidden h-full group hover:shadow-xl transition-all duration-500">
+                <Card className="card-elevated overflow-hidden h-full group hover:shadow-xl transition-all duration-500 flex flex-col">
                   {/* Project Image */}
-                  <div className="relative overflow-hidden">
+                  <div className="relative overflow-hidden flex-shrink-0">
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-60 object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute top-4 right-4 flex gap-2">
                       <Badge className={getStatusColor(project.status)}>
@@ -616,7 +617,7 @@ export default function Projects() {
                   </div>
 
                   {/* Project Content */}
-                  <div className="p-6 flex flex-col h-[calc(100%-12rem)]">
+                  <div className="p-6 flex flex-col flex-grow">
                     <div className="flex items-center justify-between mb-3">
                       <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
                         {project.title}
@@ -643,7 +644,7 @@ export default function Projects() {
                     </div>
 
                     {/* Action Buttons */}
-                    <div className="flex gap-2">
+                    <div className="flex gap-2 mt-auto">
                       <Button
                         size="sm"
                         className="flex-1 group"
