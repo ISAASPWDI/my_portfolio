@@ -15,22 +15,22 @@ import { useTheme } from "@/providers/ThemeProvider"
 
 export default function About() {
   const skills = [
-    { name: "JavaScript", image: "/public/images/skills/js.png" },
-    { name: "TypeScript", image: "/public/images/skills/ts.png" },
-    { name: "React", image: "/public/images/skills/react.png" },
-    { name: "Node.js", image: "/public/images/skills/nodejs.webp", imageDark: "/public/images/skills/nodejsdark.png" },
-    { name: "Nest.js", image: "/public/images/skills/nestjs.svg" },
-    { name: "Java", image: "/public/images/skills/java.png" },
-    { name: "Spring Boot", image: "/public/images/skills/springboot.png" },
+    { name: "JavaScript", image: "/images/skills/js.png" },
+    { name: "TypeScript", image: "/images/skills/ts.png" },
+    { name: "React", image: "/images/skills/react.png" },
+    { name: "Node.js", image: "/images/skills/nodejs.webp", imageDark: "/images/skills/nodejsdark.png" },
+    { name: "Nest.js", image: "/images/skills/nestjs.svg" },
+    { name: "Java", image: "/images/skills/java.png" },
+    { name: "Spring Boot", image: "/images/skills/springboot.png" },
     // { name: "Python", image: "/public/images/skills/python.png" },
-    { name: "PostgreSQL", image: "/public/images/skills/postgresql.svg" },
-    { name: "MySQL", image: "/public/images/skills/mysql.png" },
-    { name: "Git", image: "/public/images/skills/git.png" },
-    { name: "Docker", image: "/public/images/skills/docker.png" },
+    { name: "PostgreSQL", image: "/images/skills/postgresql.svg" },
+    { name: "MySQL", image: "/images/skills/mysql.png" },
+    { name: "Git", image: "/images/skills/git.png" },
+    { name: "Docker", image: "/images/skills/docker.png" },
     // { name: "AWS", image: "/public/images/skills/aws.png" },
-    { name: "Tailwind CSS", image: "/public/images/skills/tailwind.png" },
-    { name: "Next.js", image: "/public/images/skills/nextjs.svg", imageDark: "/public/images/skills/nextjsdark.png" },
-    { name: "GraphQL", image: "/public/images/skills/graphql.png" }
+    { name: "Tailwind CSS", image: "/images/skills/tailwind.png" },
+    { name: "Next.js", image: "/images/skills/nextjs.svg", imageDark: "/images/skills/nextjsdark.png" },
+    { name: "GraphQL", image: "/images/skills/graphql.png" }
   ]
 
   const getSkillImage = (skillName: string, theme: "light" | "dark"): string => {
