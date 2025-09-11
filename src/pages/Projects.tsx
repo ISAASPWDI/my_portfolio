@@ -7,72 +7,95 @@ import { ExternalLink, Github, Calendar } from "lucide-react"
 export default function Projects() {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack web application with React, Node.js, and PostgreSQL. Features include user authentication, product catalog, shopping cart, and payment integration.",
+      title: "Clothing E-Commerce Platform",
+      description: "Aplicación full-stack desarrollada con Next.js, React, Redux, Node.js, Prisma, MySQL, siguiendo principios de Clean Architecture en el backend con GraphQL y autenticación segura con JWT.",
       image: "/images/projects/first.jpg",
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Tailwind CSS"],
+      technologies: [
+        "Tailwind CSS",
+        "React",
+        "Redux",
+        "Next.js",
+        "Node.js",
+        "GraphQL",
+        "MySQL",
+        "Prisma",
+        "JWT",
+        "MercadoPago"
+      ],
       liveUrl: "https://example-ecommerce.com",
-      githubUrl: "https://github.com/example/ecommerce",
+      githubUrl: "https://github.com/ISAASPWDI/clothing_ecommerce_backend",
       date: "2024",
       status: "Completed"
     },
     {
-      title: "Weather Dashboard",
-      description: "Interactive weather application with real-time data, forecasts, and beautiful visualizations. Built with React and integrated with multiple weather APIs.",
-      image: "/images/projects/second.jpg",
-      technologies: ["React", "TypeScript", "Chart.js", "Weather API", "CSS3"],
-      liveUrl: "https://example-weather.com",
-      githubUrl: "https://github.com/example/weather",
-      date: "2024",
-      status: "Completed"
+      "title": "Educational Empowerment Platform",
+      "description": "Aplicación full-stack desarrollada con Flutter, Node.js, Express.js y PostgreSQL, siguiendo principios de Clean Architecture en el backend y autenticación segura con Google y JWT.",
+      "image": "/images/projects/escogebien.jpg",
+      "technologies": ["Flutter", "Google Auth", "JWT", "Node.js", "Express.js", "PostgreSQL", "Clean Architecture"],
+      "liveUrl": "https://example-edu.com",
+      "githubUrl": "https://github.com/ISAASPWDI/escogebien-backend",
+      "date": "2025",
+      "status": "Completed"
     },
     {
-      title: "Task Management App",
-      description: "Collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop",
-      technologies: ["Vue.js", "Firebase", "Vuetify", "Socket.io"],
-      liveUrl: "https://example-tasks.com",
-      githubUrl: "https://github.com/example/tasks",
-      date: "2023",
-      status: "Completed"
+      "title": "UNCP Library System",
+      "description": "Aplicación full-stack desarrollada con HTML, CSS, Bootstrap, JavaScript, Node.js, Express.js y SQL Server, convertida en aplicación de escritorio con Electron, con generación de reportes en PDF mediante PDFKit.",
+      "image": "/images/projects/biblioteca.jpg",
+      "technologies": ["HTML5", "CSS3", "Bootstrap", "JavaScript", "Node.js", "Express.js", "SQL Server", "Electron", "PDFKit"],
+      "liveUrl": "#nosource",
+      "githubUrl": "https://github.com/ISAASPWDI/sistema-de-biblioteca-UNCP",
+      "date": "2024",
+      "status": "Completed"
     },
     {
-      title: "AI Chat Interface",
-      description: "Modern chat interface with AI integration, real-time messaging, and beautiful UI. Currently being enhanced with advanced features.",
-      image: "/images/projects/little-projects.jpg",
-      technologies: ["React", "OpenAI API", "WebSocket", "Framer Motion"],
-      liveUrl: "#",
-      githubUrl: "https://github.com/example/ai-chat",
-      date: "2024",
-      status: "In Progress"
+      "title": "JavaScript Projects",
+      "description": "Colección de aplicaciones web desarrolladas con Node.js, Express.js, HTML5, CSS3 y JavaScript Vanilla. Incluye proyectos como lista de tareas, carrito de compras, calculadoras y formularios, aplicando validación con Regex, arquitectura modular y diseño responsivo.",
+      "image": "/images/projects/little-projects.jpg",
+      "technologies": ["Node.js", "Express.js", "HTML5", "CSS3", "JavaScript", "Regex", "Responsive Design"],
+      "githubUrl": "https://github.com/ISAASPWDI/personalProjects",
+      "date": "2023",
+      "status": "Completed"
     },
     {
-      title: "Portfolio Website",
-      description: "Personal portfolio showcasing projects, skills, and experience. Built with modern technologies and optimized for performance.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop",
-      technologies: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
-      liveUrl: "#",
-      githubUrl: "https://github.com/example/portfolio",
-      date: "2024",
-      status: "Completed"
+      "title": "StudySync",
+      "description": "Aplicación de emparejamiento académico inspirada en Tinder, desarrollada con Flutter para el frontend, Nest.js y TypeScript para el backend, MongoDB como base de datos y un modelo supervisado de ML con KNN construido en Python y FastAPI. Incluye autenticación segura con Google, GitHub y JWT.",
+      "image": "/images/projects/studysync.jpg",
+      "technologies": ["Flutter", "Next.js", "TypeScript", "MongoDB", "Python", "FastAPI", "KNN", "JWT", "Google Auth", "GitHub Auth"],
+      "liveUrl": "#",
+      "githubUrl": "#",
+      "date": "2025",
+      "status": "In Progress"
     },
     {
-      title: "Learning Management System",
-      description: "Educational platform with course management, progress tracking, and interactive learning modules. Designed for scalability and user engagement.",
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&h=300&fit=crop",
-      technologies: ["Next.js", "Prisma", "PostgreSQL", "NextAuth"],
-      liveUrl: "#",
-      githubUrl: "https://github.com/example/lms",
-      date: "2024",
-      status: "Planning"
+      "title": "E-Commerce Platform",
+      "description": "Aplicación full-stack de comercio electrónico para la gestión de una amplia variedad de productos, desarrollada con React, Redux y Tailwind CSS en el frontend, y Java con Spring Boot, Spring Security, Spring Data y MySQL en el backend. Incluye autenticación con JWT, arquitectura de microservicios REST, despliegue en AWS y contenedorización con Docker.",
+      "image": "/images/projects/java-ecommerce.jpg",
+      "technologies": ["React", "Redux", "Tailwind CSS", "Java", "Spring Boot", "Spring Security", "Spring Data", "MySQL", "JWT", "AWS", "Docker"],
+      "liveUrl": "#",
+      "githubUrl": "#",
+      "date": "2025",
+      "status": "In Progress"
+    },
+    {
+      "title": "Attendance Tracking System",
+      "description": "Aplicación full-stack para el registro y gestión de asistencias, desarrollada con Angular y TypeScript en el frontend, y Java con Spring Boot, Spring Security, JPA y PostgreSQL en el backend. Incluye autenticación segura con JWT y despliegue con Docker.",
+      "image": "/images/projects/scholar-attendance.jpg",
+      "technologies": ["Angular", "TypeScript", "Java", "Spring Boot", "Spring Security", "JPA", "PostgreSQL", "JWT", "Docker"],
+      "liveUrl": "#",
+      "githubUrl": "#",
+      "date": "2025",
+      "status": "Planning"
     }
+
+
+
   ]
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'Completed': return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200'
-      case 'In Progress': return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200'
-      case 'Planning': return 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200'
+      case 'Completed': return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 hover:transition-all hover:transform-scale-110 hover:bg-green-100'
+      case 'In Progress': return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 hover:bg-blue-100'
+      case 'Planning': return 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 hover:bg-yellow-100'
       default: return 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200'
     }
   }
@@ -609,11 +632,12 @@ export default function Projects() {
                       alt={project.title}
                       className="w-full h-60 object-cover group-hover:scale-110 transition-transform duration-500"
                     />
-                    <div className="absolute top-4 right-4 flex gap-2">
+                    <div className="absolute top-4 right-4 flex gap-2 transition-all ease-in-out duration-300 hover:scale-110">
                       <Badge className={getStatusColor(project.status)}>
                         {project.status}
                       </Badge>
                     </div>
+
                   </div>
 
                   {/* Project Content */}
@@ -651,22 +675,27 @@ export default function Projects() {
                         asChild={project.liveUrl !== '#'}
                         disabled={project.liveUrl === '#'}
                       >
-                        {project.liveUrl !== '#' ? (
+                        {project.liveUrl === '#nosource' ? (
+                          <span className="flex  bg-muted-foreground hover:bg-muted-foreground">
+                            <ExternalLink className="h-4 w-4 mr-2" />
+                            Not available
+                          </span>
+                        ) : project.liveUrl !== '#' ? (
                           <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                             <ExternalLink className="h-4 w-4 mr-2" />
                             Live Demo
                           </a>
                         ) : (
-                          <span>
+                          <span className="flex">
                             <ExternalLink className="h-4 w-4 mr-2" />
                             Coming Soon
                           </span>
                         )}
                       </Button>
 
+
                       <Button
                         size="sm"
-                        variant="outline"
                         asChild={project.githubUrl !== '#'}
                         disabled={project.githubUrl === '#'}
                       >
@@ -695,20 +724,21 @@ export default function Projects() {
             className="mt-20 text-center"
           >
             <Card className="card-elevated p-8 max-w-2xl mx-auto">
-              <h3 className="text-2xl font-bold mb-4 text-gradient">Want to Collaborate?</h3>
+              <h3 className="text-2xl font-bold mb-4 text-gradient">¿Colaboramos?</h3>
               <p className="text-muted-foreground mb-6">
-                I'm always looking for exciting projects to work on and talented people to collaborate with.
-                Let's create something amazing together!
+                Estoy abierto a participar en proyectos innovadores y aportar valor junto a equipos
+                con talento y visión. Si buscas compromiso, creatividad y resultados, podemos lograr grandes cosas juntos.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="mailto:contact@example.com" className="btn-primary inline-flex items-center justify-center">
-                  Start a Project
+                <a href="mailto:stivensaliaga@gmail.com" className="btn-primary inline-flex items-center justify-center">
+                  Iniciar un Proyecto
                 </a>
                 <a href="/about" className="btn-secondary inline-flex items-center justify-center">
-                  Learn More About Me
+                  Conocer Más Sobre Mí
                 </a>
               </div>
             </Card>
+
           </motion.div>
         </div>
       </div>
