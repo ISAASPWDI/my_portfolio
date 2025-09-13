@@ -8,10 +8,7 @@ import { useState } from "react"
 const navigation = [
   { name: "Home", href: "/", icon: Home },
   { name: "About", href: "/about", icon: User },
-  { name: "Projects", href: "/projects", icon: Briefcase },
-  { name: "Notebook", href: "/notebook", icon: BookOpen },
-  { name: "Reflection", href: "/reflection", icon: FileText },
-  { name: "Resources", href: "/resources", icon: Users },
+  { name: "Projects", href: "/projects", icon: Briefcase }
 ]
 
 export function Navigation() {
