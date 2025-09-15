@@ -20,7 +20,7 @@ export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
   const { toast } = useToast()
-  
+
   const {
     register,
     handleSubmit,
@@ -30,21 +30,21 @@ export function ContactForm() {
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true)
-    
+
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000))
-    
+
     console.log('Form submitted:', data)
-    
+
     toast({
       title: "Message sent successfully!",
       description: "Thank you for reaching out. I'll get back to you soon.",
     })
-    
+
     setIsSubmitted(true)
     setIsSubmitting(false)
     reset()
-    
+
     // Reset success state after 3 seconds
     setTimeout(() => setIsSubmitted(false), 3000)
   }
@@ -80,31 +80,31 @@ export function ContactForm() {
       transition={{ duration: 0.8 }}
     >
       <Card className="card-elevated p-8">
-        <h3 className="text-2xl font-bold mb-6 text-gradient">Hablemos</h3>
-        
+        <h3 className="text-2xl font-bold mb-6 text-gradient">Let's talk</h3>
+
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
           <div className="grid md:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label htmlFor="name">Nombre</Label>
+              <Label htmlFor="name">Name</Label>
               <Input
                 id="name"
-                placeholder="Tu nombre completo"
-                {...register("name", { required: "El nombre es obligatorio" })}
+                placeholder="Your full name"
+                {...register("name", { required: "Name is required" })}
                 className={errors.name ? "border-destructive" : ""}
               />
               {errors.name && (
                 <p className="text-sm text-destructive">{errors.name.message}</p>
               )}
             </div>
-            
+
             <div className="space-y-2">
-              <Label htmlFor="email">Correo</Label>
+              <Label htmlFor="email">Email</Label>
               <Input
                 id="email"
                 type="email"
-                placeholder="tu.email@ejemplo.com"
+                placeholder="your.email@example.com"
                 {...register("email", {
-                  required: "El correo es obligatorio",
+                  required: "Email is required",
                   pattern: {
                     value: /^\S+@\S+$/i,
                     message: "Invalid email address"
@@ -117,33 +117,33 @@ export function ContactForm() {
               )}
             </div>
           </div>
-          
+
           <div className="space-y-2">
-            <Label htmlFor="subject">Asunto</Label>
+            <Label htmlFor="subject">Subject</Label>
             <Input
               id="subject"
-              placeholder="¿Podría indicarme de qué se trata?"
-              {...register("subject", { required: "El asunto es obligatorio" })}
+              placeholder="What is it about?"
+              {...register("subject", { required: "Subject is required" })}
               className={errors.subject ? "border-destructive" : ""}
             />
             {errors.subject && (
               <p className="text-sm text-destructive">{errors.subject.message}</p>
             )}
           </div>
-          
+
           <div className="space-y-2">
-            <Label htmlFor="message">Mensaje</Label>
+            <Label htmlFor="message">Message</Label>
             <Textarea
               id="message"
-              placeholder="Cuéntame sobre tu proyecto, tu consulta o simplemente salúdame..."
+              placeholder="Tell me about your project, your question, or just say hi..."
               className={`min-h-[120px] resize-none ${errors.message ? "border-destructive" : ""}`}
-              {...register("message", { required: "El mensaje es obligatorio" })}
+              {...register("message", { required: "Message is required" })}
             />
             {errors.message && (
               <p className="text-sm text-destructive">{errors.message.message}</p>
             )}
           </div>
-          
+
           <Button
             type="submit"
             disabled={isSubmitting}
@@ -152,11 +152,11 @@ export function ContactForm() {
             {isSubmitting ? (
               <>
                 <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2" />
-                Enviando...
+                Sending...
               </>
             ) : (
               <>
-                Enviar Mensaje
+                Send Message
                 <Send className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </>
             )}

@@ -8,7 +8,7 @@ export default function Projects() {
   const projects = [
     {
       title: "Clothing E-Commerce Platform",
-      description: "Aplicación full-stack desarrollada con Next.js, React, Redux, Node.js, Prisma, MySQL, siguiendo principios de Clean Architecture en el backend con GraphQL y autenticación segura con JWT.",
+      description: "Full-stack application developed with Next.js, React, Redux, Node.js, Prisma, MySQL, following Clean Architecture principles in the backend with GraphQL and secure authentication using JWT.",
       image: "/images/projects/first.jpg",
       technologies: [
         "Tailwind CSS",
@@ -28,68 +28,66 @@ export default function Projects() {
       status: "Completed"
     },
     {
-      "title": "Educational Empowerment Platform",
-      "description": "Aplicación full-stack desarrollada con Flutter, Node.js, Express.js y PostgreSQL, siguiendo principios de Clean Architecture en el backend y autenticación segura con Google y JWT.",
-      "image": "/images/projects/escogebien.jpg",
-      "technologies": ["Flutter", "Google Auth", "JWT", "Node.js", "Express.js", "PostgreSQL", "Clean Architecture"],
-      "liveUrl": "https://example-edu.com",
-      "githubUrl": "https://github.com/ISAASPWDI/escogebien-backend",
-      "date": "2025",
-      "status": "Completed"
+      title: "Educational Empowerment Platform",
+      description: "Full-stack application developed with Flutter, Node.js, Express.js, and PostgreSQL, following Clean Architecture principles in the backend with secure authentication using Google and JWT.",
+      image: "/images/projects/escogebien.jpg",
+      technologies: ["Flutter", "Google Auth", "JWT", "Node.js", "Express.js", "PostgreSQL", "Clean Architecture"],
+      liveUrl: "https://example-edu.com",
+      githubUrl: "https://github.com/ISAASPWDI/escogebien-backend",
+      date: "2025",
+      status: "Completed"
     },
     {
-      "title": "UNCP Library System",
-      "description": "Aplicación full-stack desarrollada con HTML, CSS, Bootstrap, JavaScript, Node.js, Express.js y SQL Server, convertida en aplicación de escritorio con Electron, con generación de reportes en PDF mediante PDFKit.",
-      "image": "/images/projects/biblioteca.jpg",
-      "technologies": ["HTML5", "CSS3", "Bootstrap", "JavaScript", "Node.js", "Express.js", "SQL Server", "Electron", "PDFKit"],
-      "liveUrl": "#nosource",
-      "githubUrl": "https://github.com/ISAASPWDI/sistema-de-biblioteca-UNCP",
-      "date": "2024",
-      "status": "Completed"
+      title: "UNCP Library System",
+      description: "Full-stack application developed with HTML, CSS, Bootstrap, JavaScript, Node.js, Express.js, and SQL Server, converted into a desktop application with Electron, including PDF report generation using PDFKit.",
+      image: "/images/projects/biblioteca.jpg",
+      technologies: ["HTML5", "CSS3", "Bootstrap", "JavaScript", "Node.js", "Express.js", "SQL Server", "Electron", "PDFKit"],
+      liveUrl: "#nosource",
+      githubUrl: "https://github.com/ISAASPWDI/sistema-de-biblioteca-UNCP",
+      date: "2024",
+      status: "Completed"
     },
     {
-      "title": "JavaScript Projects",
-      "description": "Colección de aplicaciones web desarrolladas con Node.js, Express.js, HTML5, CSS3 y JavaScript Vanilla. Incluye proyectos como lista de tareas, carrito de compras, calculadoras y formularios, aplicando validación con Regex, arquitectura modular y diseño responsivo.",
-      "image": "/images/projects/little-projects.jpg",
-      "technologies": ["Node.js", "Express.js", "HTML5", "CSS3", "JavaScript", "Regex", "Responsive Design"],
-      "githubUrl": "https://github.com/ISAASPWDI/personalProjects",
-      "date": "2023",
-      "status": "Completed"
+      title: "JavaScript Projects",
+      description: "Collection of web applications developed with Node.js, Express.js, HTML5, CSS3, and vanilla JavaScript. Includes projects like task lists, shopping carts, calculators, and forms, applying validation with Regex, modular architecture, and responsive design.",
+      image: "/images/projects/little-projects.jpg",
+      technologies: ["Node.js", "Express.js", "HTML5", "CSS3", "JavaScript", "Regex", "Responsive Design"],
+      githubUrl: "https://github.com/ISAASPWDI/personalProjects",
+      date: "2023",
+      status: "Completed"
     },
     {
-      "title": "StudySync",
-      "description": "Aplicación de emparejamiento académico inspirada en Tinder, desarrollada con Flutter para el frontend, Nest.js y TypeScript para el backend, MongoDB como base de datos y un modelo supervisado de ML con KNN construido en Python y FastAPI. Incluye autenticación segura con Google, GitHub y JWT.",
-      "image": "/images/projects/studysync.jpg",
-      "technologies": ["Flutter", "Next.js", "TypeScript", "MongoDB", "Python", "FastAPI", "KNN", "JWT", "Google Auth", "GitHub Auth"],
-      "liveUrl": "#",
-      "githubUrl": "#",
-      "date": "2025",
-      "status": "In Progress"
+      title: "StudySync",
+      description: "Academic matching application inspired by Tinder, developed with Flutter for the frontend, Nest.js and TypeScript for the backend, MongoDB as database, and a supervised ML model with KNN built in Python and FastAPI. Includes secure authentication with Google, GitHub, and JWT.",
+      image: "/images/projects/studysync.jpg",
+      technologies: ["Flutter", "Next.js", "TypeScript", "MongoDB", "Python", "FastAPI", "KNN", "JWT", "Google Auth", "GitHub Auth"],
+      liveUrl: "#",
+      githubUrl: "#",
+      date: "2025",
+      status: "In Progress"
     },
     {
-      "title": "E-Commerce Platform",
-      "description": "Aplicación full-stack de comercio electrónico para la gestión de una amplia variedad de productos, desarrollada con React, Redux y Tailwind CSS en el frontend, y Java con Spring Boot, Spring Security, Spring Data y MySQL en el backend. Incluye autenticación con JWT, arquitectura de microservicios REST, despliegue en AWS y contenedorización con Docker.",
-      "image": "/images/projects/java-ecommerce.jpg",
-      "technologies": ["React", "Redux", "Tailwind CSS", "Java", "Spring Boot", "Spring Security", "Spring Data", "MySQL", "JWT", "AWS", "Docker"],
-      "liveUrl": "#",
-      "githubUrl": "#",
-      "date": "2025",
-      "status": "In Progress"
+      title: "E-Commerce Platform",
+      description: "Full-stack e-commerce application for managing a wide variety of products, developed with React, Redux, and Tailwind CSS on the frontend, and Java with Spring Boot, Spring Security, Spring Data, and MySQL on the backend. Includes JWT authentication, REST microservices architecture, deployment on AWS, and containerization with Docker.",
+      image: "/images/projects/java-ecommerce.jpg",
+      technologies: ["React", "Redux", "Tailwind CSS", "Java", "Spring Boot", "Spring Security", "Spring Data", "MySQL", "JWT", "AWS", "Docker"],
+      liveUrl: "#",
+      githubUrl: "#",
+      date: "2025",
+      status: "In Progress"
     },
     {
-      "title": "Attendance Tracking System",
-      "description": "Aplicación full-stack para el registro y gestión de asistencias, desarrollada con Angular y TypeScript en el frontend, y Java con Spring Boot, Spring Security, JPA y PostgreSQL en el backend. Incluye autenticación segura con JWT y despliegue con Docker.",
-      "image": "/images/projects/scholar-attendance.jpg",
-      "technologies": ["Angular", "TypeScript", "Java", "Spring Boot", "Spring Security", "JPA", "PostgreSQL", "JWT", "Docker"],
-      "liveUrl": "#",
-      "githubUrl": "#",
-      "date": "2025",
-      "status": "Planning"
+      title: "Attendance Tracking System",
+      description: "Full-stack application for attendance tracking and management, developed with Angular and TypeScript on the frontend, and Java with Spring Boot, Spring Security, JPA, and PostgreSQL on the backend. Includes secure JWT authentication and deployment with Docker.",
+      image: "/images/projects/scholar-attendance.jpg",
+      technologies: ["Angular", "TypeScript", "Java", "Spring Boot", "Spring Security", "JPA", "PostgreSQL", "JWT", "Docker"],
+      liveUrl: "#",
+      githubUrl: "#",
+      date: "2025",
+      status: "Planning"
     }
-
-
-
   ]
+
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -606,12 +604,13 @@ export default function Projects() {
             className="text-center mb-16"
           >
             <h1 className="text-5xl lg:text-6xl font-bold mb-6">
-              <span className="text-gradient">Mis proyectos</span>
+              <span className="text-gradient">My projects</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Una muestra de mis proyectos completados, el trabajo actual y las ideas futuras.
-              Cada proyecto representa un paso en mi camino como desarrollador.
+              A showcase of my completed projects, current work, and future ideas.
+              Each project represents a step forward in my journey as a developer.
             </p>
+
           </motion.div>
 
           {/* Projects Grid */}
@@ -724,20 +723,21 @@ export default function Projects() {
             className="mt-20 text-center"
           >
             <Card className="card-elevated p-8 max-w-2xl mx-auto">
-              <h3 className="text-2xl font-bold mb-4 text-gradient">¿Colaboramos?</h3>
+              <h3 className="text-2xl font-bold mb-4 text-gradient">Shall We Collaborate?</h3>
               <p className="text-muted-foreground mb-6">
-                Estoy abierto a participar en proyectos innovadores y aportar valor junto a equipos
-                con talento y visión. Si buscas compromiso, creatividad y resultados, podemos lograr grandes cosas juntos.
+                I’m open to participating in innovative projects and contributing value alongside talented and visionary teams.
+                If you’re looking for commitment, creativity, and results, we can achieve great things together.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="mailto:stivensaliaga@gmail.com" className="btn-primary inline-flex items-center justify-center">
-                  Iniciar un Proyecto
+                  Start a Project
                 </a>
                 <a href="/about" className="btn-secondary inline-flex items-center justify-center">
-                  Conocer Más Sobre Mí
+                  Learn More About Me
                 </a>
               </div>
             </Card>
+
 
           </motion.div>
         </div>

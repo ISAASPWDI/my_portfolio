@@ -55,18 +55,51 @@ export default function About() {
 
 
   const interests = [
-    { icon: Code2, title: "Desarrollo Full Stack", description: "Diseño y construcción de aplicaciones completas, desde el frontend hasta el backend." },
-    { icon: Lightbulb, title: "Resolución de Problemas", description: "Capacidad para analizar retos complejos y proponer soluciones eficientes e innovadoras." },
-    { icon: BookOpen, title: "Aprendizaje Continuo", description: "Actualización constante en nuevas tecnologías y buenas prácticas de desarrollo." },
-    { icon: Users, title: "Colaboración", description: "Experiencia trabajando en equipos multidisciplinarios con metodologías ágiles." }
+    {
+      icon: Code2,
+      title: "Full Stack Development",
+      description: "Design and build complete applications, from frontend to backend."
+    },
+    {
+      icon: Lightbulb,
+      title: "Problem Solving",
+      description: "Ability to analyze complex challenges and propose efficient, innovative solutions."
+    },
+    {
+      icon: BookOpen,
+      title: "Continuous Learning",
+      description: "Constantly staying up-to-date with new technologies and development best practices."
+    },
+    {
+      icon: Users,
+      title: "Collaboration",
+      description: "Experience working in multidisciplinary teams using agile methodologies."
+    }
   ]
 
   const values = [
-    { icon: Target, title: "Excelencia", description: "Compromiso con código limpio, eficiente y fácil de mantener." },
-    { icon: Heart, title: "Pasión", description: "Entusiasmo genuino por la innovación tecnológica." },
-    { icon: Laptop, title: "Adaptabilidad", description: "Flexibilidad para aprender y aplicar nuevas herramientas." },
-    { icon: Trophy, title: "Crecimiento", description: "Orientado al desarrollo profesional y a superar nuevos desafíos." }
+    {
+      icon: Target,
+      title: "Excellence",
+      description: "Commitment to clean, efficient, and maintainable code."
+    },
+    {
+      icon: Heart,
+      title: "Passion",
+      description: "Genuine enthusiasm for technological innovation."
+    },
+    {
+      icon: Laptop,
+      title: "Adaptability",
+      description: "Flexibility to learn and apply new tools."
+    },
+    {
+      icon: Trophy,
+      title: "Growth",
+      description: "Driven by professional development and overcoming new challenges."
+    }
   ]
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/30">
@@ -389,14 +422,15 @@ export default function About() {
           className="text-center mb-16"
         >
           <h1 className="text-5xl lg:text-6xl font-bold mb-6">
-            <span className="text-gradient">Sobre mí</span>
+            <span className="text-gradient">About Me</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Aquí encontrarás una breve visión de mis intereses y valores como desarrollador.
-            Me caracteriza la búsqueda de soluciones innovadoras, el aprendizaje continuo y
-            la colaboración efectiva, principios que guían mi trabajo y mi crecimiento profesional.
+            Here you'll find a brief overview of my interests and values as a developer.
+            I'm driven by the pursuit of innovative solutions, continuous learning, and
+            effective collaboration — principles that guide my work and professional growth.
           </p>
         </motion.div>
+
 
         {/* Who I Am Section */}
         <motion.section
@@ -410,18 +444,17 @@ export default function About() {
             <div className="grid lg:grid-cols-2 gap-8 items-start">
               <div className="space-y-6">
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Soy Stevens Aliaga, un apasionado estudiante de Ingeniería de Sistemas y aspirante
-                  a desarrollador full-stack con un profundo amor por crear soluciones digitales
-                  innovadoras. Actualmente me encuentro desarrollando mis habilidades tanto en los
-                  fundamentos teóricos como en las aplicaciones prácticas del desarrollo de software.
+                  I'm Stevens Aliaga, a passionate Systems Engineering student and aspiring full-stack developer
+                  with a deep love for creating innovative digital solutions. I'm currently developing my skills
+                  in both the theoretical foundations and practical applications of software development.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Mi camino comenzó con la curiosidad sobre cómo funcionan los sitios web, lo cual
-                  rápidamente evolucionó hacia una pasión por construir aplicaciones completas desde
-                  el concepto hasta el despliegue. Me motiva el desafío de resolver problemas complejos
-                  y convertir ideas en realidad a través del código.
+                  My journey began with curiosity about how websites work, which quickly evolved into a passion
+                  for building complete applications — from concept to deployment. I'm motivated by the challenge
+                  of solving complex problems and turning ideas into reality through code.
                 </p>
               </div>
+
               <div className="space-y-4">
                 <h3 className="text-xl font-extrabold mb-4">Technical Skills</h3>
                 <div className="flex flex-wrap gap-2">
@@ -827,20 +860,21 @@ export default function About() {
           className="mt-20 text-center"
         >
           <Card className="card-elevated p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4 text-gradient">Conectemos</h3>
+            <h3 className="text-2xl font-bold mb-4 text-gradient">Let's Connect</h3>
             <p className="text-muted-foreground mb-6">
-              Estoy abierto a conversar sobre nuevas oportunidades laborales, colaborar en proyectos
-              innovadores o intercambiar ideas sobre tecnología y desarrollo.
+              I’m open to discussing new job opportunities, collaborating on innovative projects,
+              or exchanging ideas about technology and development.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="mailto:stivensaliaga@gmail.com" className="btn-primary inline-flex items-center justify-center">
-                Contáctame
+                Contact Me
               </a>
               <a href="/projects" className="btn-secondary inline-flex items-center justify-center">
-                Ver Mis Proyectos
+                View My Projects
               </a>
             </div>
           </Card>
+
 
         </motion.div>
       </div>

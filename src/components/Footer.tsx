@@ -85,7 +85,7 @@ export function Footer() {
               © {new Date().getFullYear()}
             </p>
             <p className="text-muted-foreground text-xs mt-1">
-              Hecho con TypeScript & Tailwind CSS
+              Made with TypeScript & Tailwind CSS
             </p>
           </motion.div>
         </div>

@@ -16,32 +16,32 @@ export default function Home() {
   const homeCards = [
     {
       icon: GraduationCap,
-      title: "Educación",
+      title: "Education",
       items: [
-        { degree: "Ingeniería de Sistemas", description: "Universidad Nacional del Centro del Perú • 2021 - 2026" },
-        { degree: "Curso: Node.js de Cero a Experto", description: "Udemy • 2025" },
-        { degree: "Curso: Universidad Java", description: "Udemy • 2025" }
+        { degree: "Systems Engineering", description: "Universidad Nacional del centro del Perú • 2021 - 2026" },
+        { degree: "Course: Node.js from Zero to Expert", description: "Udemy • 2025" },
+        { degree: "Course: Java University", description: "Udemy • 2025" }
       ]
     },
     {
       icon: Briefcase,
-      title: "Experiencia",
+      title: "Experience",
       items: [
-        { degree: "Practicante backend developer", description: "Tecnovedades Web • Ago 2024 – Ago 2025 (1 año)" },
-        { degree: "Practicante backend developer", description: "Holinsys • Feb 2022 – Oct 2022 (8 meses)" }
+        { degree: "Backend Developer Intern", description: "Tecnovedades Web • Aug 2024 – Aug 2025 (1 year)" },
+        { degree: "Backend Developer Intern", description: "Holinsys • Feb 2022 – Oct 2022 (8 months)" }
       ]
     },
     {
       icon: MapPin,
-      title: "Ubicación",
+      title: "Location",
       items: [
-        { degree: "Disponible para trabajar a nivel mundial" },
-        { description: "Abierto a oportunidades en remoto" },
-        { description: "Disponibilidad para reubicación si es necesario" }
+        { degree: "Available to work worldwide" },
+        { description: "Open to remote opportunities" },
+        { description: "Willing to relocate if necessary" }
       ]
     }
-
   ]
+
 
   return (
     <div className="hero-section overflow-hidden">
@@ -62,14 +62,14 @@ export default function Home() {
               className="flex flex-col items-center lg:block"
             >
               <h1 className="text-center text-foreground lg:text-start text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4">
-                Hola, Soy <br />
+                Hi, I&apos;m <br />
                 Stevens Aliaga
               </h1>
               <p className="text-center lg:text-start text-lg sm:text-xl lg:text-2xl text-muted-foreground mb-6 leading-relaxed">
                 Backend developer & System Engineer Student
               </p>
               <p className=" text-center lg:text-start text-base lg:text-lg text-muted-foreground max-w-lg">
-                Con una profunda pasión por mi carrera. Estoy constantemente en busca de nuevas oportunidades de aprendizaje y me entusiasma explorar tecnologías de vanguardia que me permitan innovar y superar desafíos.
+                With a deep passion for my field, I'm constantly seeking new learning opportunities and excited to explore cutting-edge technologies that allow me to innovate and overcome challenges.
               </p>
             </motion.div>
 
@@ -110,14 +110,14 @@ export default function Home() {
             >
               <Link to="/projects">
                 <Button className="btn-primary group transition-transform duration-500 w-full sm:w-auto">
-                  Ver mi trabajo
+                  View my work
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" />
                 </Button>
               </Link>
               <a href="/CV_STEVENS_ALIAGA_ARAUCO.pdf" download="CV_STEVENS_ALIAGA_ARAUCO.pdf">
                 <Button variant="outline" className="btn-secondary hover:bg-primary/10 group transition-all duration-300 w-full sm:w-auto">
                   <Download className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform duration-500" />
-                  Descargar CV
+                  Download CV
                 </Button>
               </a>
 
@@ -341,7 +341,9 @@ export default function Home() {
           transition={{ duration: 0.8, delay: 1 }}
           className="mt-16 lg:mt-20 text-center"
         >
-          <p className="text-muted-foreground mb-6 lg:mb-8">Explora mi trayectoria en la tecnología y el aprendizaje</p>
+<p className="text-muted-foreground mb-6 lg:mb-8">
+  Explore my journey in technology and learning
+</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-6 max-w-3xl mx-auto">
             {[
               { number: "15+", label: "Projects Completed" },
@@ -469,11 +471,12 @@ export default function Home() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 1.6 }}
               >
-                <h2 className="text-2xl lg:text-3xl font-bold mb-4 lg:mb-6 text-gradient">Trabajemos juntos</h2>
+                <h2 className="text-2xl lg:text-3xl font-bold mb-4 lg:mb-6 text-gradient">Let's work together</h2>
                 <p className="text-base lg:text-lg text-muted-foreground leading-relaxed mb-6 lg:mb-8">
-                  ¿Listo para dar vida a tus ideas? Siempre estoy entusiasmado por discutir nuevos proyectos, colaborar en soluciones innovadoras o simplemente conectar con otros desarrolladores y posibles empleadores.
+                  Ready to bring your ideas to life? I'm always excited to discuss new projects, collaborate on innovative solutions, or simply connect with fellow developers and potential employers.
                 </p>
               </motion.div>
+
 
               {/* Animated availability indicators */}
               <motion.div
@@ -493,7 +496,7 @@ export default function Home() {
                     transition={{ duration: 2, repeat: Infinity }}
                   />
                   <span className="text-sm lg:text-base text-muted-foreground group-hover:text-foreground transition-colors">
-                    Disponible para oportunidades de tiempo completo
+                    Open to full-time opportunities
                   </span>
                 </motion.div>
 
@@ -508,7 +511,7 @@ export default function Home() {
                     transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
                   />
                   <span className="text-sm lg:text-base text-muted-foreground group-hover:text-foreground transition-colors">
-                    Comprometido con el aprendizaje continuo
+                    Committed to continuous learning
                   </span>
                 </motion.div>
 
@@ -523,7 +526,7 @@ export default function Home() {
                     transition={{ duration: 2, repeat: Infinity, delay: 1 }}
                   />
                   <span className="text-sm lg:text-base text-muted-foreground group-hover:text-foreground transition-colors">
-                    Orientado al trabajo en equipo y la innovación
+                    Teamwork and innovation oriented
                   </span>
                 </motion.div>
               </motion.div>
@@ -549,8 +552,8 @@ export default function Home() {
                     <MessageCircle className="h-4 w-4 lg:h-5 lg:w-5 text-primary group-hover:text-primary transition-colors duration-300" />
                   </motion.div>
                   <div>
-                    <div className="font-medium text-xs lg:text-sm text-foreground">Respuesta rápida</div>
-                    <div className="text-xs text-muted-foreground">Normalmente en menos de 24 horas</div>
+                    <div className="font-medium text-xs lg:text-sm text-foreground">Fast response</div>
+                    <div className="text-xs text-muted-foreground">Usually within 24 hours</div>
                   </div>
                 </motion.div>
 
@@ -570,8 +573,8 @@ export default function Home() {
                     <Mail className="h-4 w-4 lg:h-5 lg:w-5 text-primary group-hover:text-primary transition-colors duration-300" />
                   </motion.div>
                   <div>
-                    <div className="font-medium text-xs lg:text-sm text-foreground">Profesionalismo</div>
-                    <div className="text-xs text-muted-foreground">Comunicación clara y detallada</div>
+                    <div className="font-medium text-xs lg:text-sm text-foreground">Professionalism</div>
+                    <div className="text-xs text-muted-foreground">Clear and detailed communication</div>
                   </div>
                 </motion.div>
               </motion.div>
