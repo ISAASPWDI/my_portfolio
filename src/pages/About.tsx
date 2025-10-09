@@ -423,7 +423,7 @@ export default function About() {
                 </p>
               </div>
               <div className="space-y-4">
-                <h3 className="text-xl font-extrabold mb-4">Technical Skills</h3>
+                <h3 className="text-xl font-extrabold mb-4">Habilidades Técnicas</h3>
                 <div className="flex flex-wrap gap-2">
                   {skills.map((skill, index) => {
                     const { theme } = useTheme(); // 👈 aquí traes el tema
@@ -468,7 +468,7 @@ export default function About() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mb-20"
         >
-          <h2 className="text-3xl font-bold mb-12 text-center text-gradient">My Interests</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center text-gradient">Mis Intereses</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {interests.map((interest, index) => {
               const Icon = interest.icon
@@ -793,7 +793,7 @@ export default function About() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <h2 className="text-3xl font-bold mb-12 text-center text-gradient">My Values</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center text-gradient">Mis valores</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value, index) => {
               const Icon = value.icon

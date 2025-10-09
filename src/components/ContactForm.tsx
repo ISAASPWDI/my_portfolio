@@ -8,12 +8,20 @@ import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { useToast } from "@/hooks/use-toast"
 import { Send, CheckCircle } from "lucide-react"
+import emailjs from '@emailjs/browser'
 
 interface ContactFormData {
   name: string
   email: string
   subject: string
   message: string
+}
+
+// CONFIGURACIÓN DE EMAILJS
+const EMAILJS_CONFIG = {
+  PUBLIC_KEY: 'uv7rGhuC8QRs8Uo79',
+  SERVICE_ID: 'service_7v8oewe',
+  TEMPLATE_ID: 'template_1oaueul'
 }
 
 export function ContactForm() {
@@ -31,22 +39,49 @@ export function ContactForm() {
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true)
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    
-    console.log('Form submitted:', data)
-    
-    toast({
-      title: "Message sent successfully!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    })
-    
-    setIsSubmitted(true)
-    setIsSubmitting(false)
-    reset()
-    
-    // Reset success state after 3 seconds
-    setTimeout(() => setIsSubmitted(false), 3000)
+    try {
+      // Inicializar EmailJS con tu Public Key
+      emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY)
+      
+      // ✅ CORREGIDO: Variables que coinciden con tu template
+      const templateParams = {
+        name: data.name,        // Coincide con {{name}} en el template
+        email: data.email,      // Coincide con {{email}} en el template
+        subject: data.subject,  // Coincide con {{subject}} en el template
+        message: data.message   // Coincide con {{message}} en el template
+      }
+      
+      // Enviar el email
+      const response = await emailjs.send(
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.TEMPLATE_ID,
+        templateParams
+      )
+      
+      console.log('Email enviado exitosamente:', response)
+      
+      toast({
+        title: "¡Mensaje enviado exitosamente!",
+        description: "Gracias por contactarme. Te responderé pronto.",
+      })
+      
+      setIsSubmitted(true)
+      reset()
+      
+      // Reset success state after 5 seconds
+      setTimeout(() => setIsSubmitted(false), 5000)
+      
+    } catch (error) {
+      console.error('Error al enviar el email:', error)
+      
+      toast({
+        title: "Error al enviar el mensaje",
+        description: "Por favor, intenta nuevamente o contáctame directamente por email.",
+        variant: "destructive"
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   if (isSubmitted) {
@@ -64,9 +99,9 @@ export function ContactForm() {
           >
             <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
           </motion.div>
-          <h3 className="text-2xl font-bold mb-2 text-gradient">Message Sent!</h3>
+          <h3 className="text-2xl font-bold mb-2 text-gradient">¡Mensaje Enviado!</h3>
           <p className="text-muted-foreground">
-            Thank you for reaching out. I'll get back to you as soon as possible.
+            Gracias por contactarme. Te responderé lo antes posible.
           </p>
         </Card>
       </motion.div>
@@ -107,7 +142,7 @@ export function ContactForm() {
                   required: "El correo es obligatorio",
                   pattern: {
                     value: /^\S+@\S+$/i,
-                    message: "Invalid email address"
+                    message: "Correo electrónico inválido"
                   }
                 })}
                 className={errors.email ? "border-destructive" : ""}
@@ -122,7 +157,7 @@ export function ContactForm() {
             <Label htmlFor="subject">Asunto</Label>
             <Input
               id="subject"
-              placeholder="¿Podría indicarme de qué se trata?"
+              placeholder="¿De qué se trata?"
               {...register("subject", { required: "El asunto es obligatorio" })}
               className={errors.subject ? "border-destructive" : ""}
             />
@@ -135,7 +170,7 @@ export function ContactForm() {
             <Label htmlFor="message">Mensaje</Label>
             <Textarea
               id="message"
-              placeholder="Cuéntame sobre tu proyecto, tu consulta o simplemente salúdame..."
+              placeholder="Cuéntame sobre tu proyecto, consulta o simplemente salúdame..."
               className={`min-h-[120px] resize-none ${errors.message ? "border-destructive" : ""}`}
               {...register("message", { required: "El mensaje es obligatorio" })}
             />

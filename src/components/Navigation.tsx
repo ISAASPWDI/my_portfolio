@@ -6,12 +6,11 @@ import { useState } from "react"
 
 
 const navigation = [
-  { name: "Home", href: "/", icon: Home },
-  { name: "About", href: "/about", icon: User },
-  { name: "Projects", href: "/projects", icon: Briefcase },
-  { name: "Notebook", href: "/notebook", icon: BookOpen },
-  { name: "Reflection", href: "/reflection", icon: FileText },
-  { name: "Resources", href: "/resources", icon: Users },
+  { name: "Inicio", href: "/", icon: Home },
+  { name: "Acerca de mí", href: "/about", icon: User },
+  { name: "Proyectos", href: "/projects", icon: Briefcase },
+  { name: "Cuaderno", href: "/notebook", icon: BookOpen },
+  { name: "Recursos", href: "/resources", icon: Users },
 ]
 
 export function Navigation() {

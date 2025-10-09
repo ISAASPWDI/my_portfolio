@@ -99,22 +99,19 @@ export function Footer() {
         >
           <div className="flex flex-wrap justify-center gap-6 text-sm">
             <a href="/" className="text-muted-foreground hover:text-primary transition-colors">
-              Home
+              Inicio
             </a>
             <a href="/about" className="text-muted-foreground hover:text-primary transition-colors">
-              About
+              Acerca de mí
             </a>
             <a href="/projects" className="text-muted-foreground hover:text-primary transition-colors">
-              Projects
+              Proyectos
             </a>
             <a href="/notebook" className="text-muted-foreground hover:text-primary transition-colors">
-              Learning Notebook
-            </a>
-            <a href="/reflection" className="text-muted-foreground hover:text-primary transition-colors">
-              Reflection
+              Cuaderno
             </a>
             <a href="/resources" className="text-muted-foreground hover:text-primary transition-colors">
-              Resources
+              Recursos
             </a>
           </div>
         </motion.div>

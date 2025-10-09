@@ -14,36 +14,36 @@ export default function Resources() {
         {
           title: "You Don't Know JS (Book Series)",
           author: "Kyle Simpson",
-          description: "Deep dive into JavaScript fundamentals and advanced concepts",
+          description: "Profundización en los fundamentos de JavaScript y conceptos avanzados",
           url: "https://github.com/getify/You-Dont-Know-JS",
           type: "Book",
           rating: 5,
           tags: ["JavaScript", "Fundamentals"]
         },
         {
-          title: "React Documentation", 
+          title: "React Documentation",
           author: "React Team",
-          description: "Official React documentation with tutorials and API reference",
+          description: "Documentación oficial de React con tutoriales y referencia de API",
           url: "https://react.dev/",
           type: "Documentation",
           rating: 5,
           tags: ["React", "Reference"]
         },
         {
-          title: "Eloquent JavaScript",
-          author: "Marijn Haverbeke", 
-          description: "A modern introduction to programming and JavaScript",
-          url: "https://eloquentjavascript.net/",
-          type: "Book",
+          title: "Nestjs Documentation",
+          author: "Kamil Mysliwiec",
+          description: "Un framework progresivo de NodeJS para construir aplicaciones del lado del servidor eficientes, confiables y escalables.",
+          url: "https://docs.nestjs.com/",
+          type: "Documentation",
           rating: 5,
-          tags: ["JavaScript", "Programming"]
+          tags: ["Nestjs", "Nodejs", "TypeScript", "Programming"]
         },
         {
           title: "MDN Web Docs",
           author: "Mozilla",
-          description: "Comprehensive web development documentation and tutorials",
+          description: "Documentación y tutoriales completos sobre desarrollo web",
           url: "https://developer.mozilla.org/",
-          type: "Documentation", 
+          type: "Documentation",
           rating: 5,
           tags: ["Web Dev", "Reference"]
         }
@@ -64,39 +64,57 @@ export default function Resources() {
           tags: ["JavaScript", "Full Course"]
         },
         {
-          title: "React - The Complete Guide",
-          author: "Maximilian Schwarzmüller",
+          title: "React - From Scratch to expert",
+          author: "Fernando Herrera",
           description: "Learn React, Redux, React Hooks, React Router & more",
-          url: "https://www.udemy.com/course/react-the-complete-guide/",
-          type: "Course", 
+          url: "https://www.udemy.com/course/react-cero-experto/",
+          type: "Course",
           rating: 5,
           tags: ["React", "Redux"]
         },
         {
-          title: "freeCodeCamp YouTube",
-          author: "freeCodeCamp.org",
-          description: "Free programming tutorials and full-length courses",
-          url: "https://www.youtube.com/c/Freecodecamp",
+          title: "JonMircha Youtube",
+          author: "Jonmircha",
+          description: "Tutoriales de programación gratuitos y cursos completos",
+          url: "https://www.youtube.com/@jonmircha/featured",
           type: "YouTube",
           rating: 5,
           tags: ["Free", "Tutorials"]
         },
         {
-          title: "Traversy Media",
-          author: "Brad Traversy",
-          description: "Web development tutorials and crash courses",
-          url: "https://www.youtube.com/c/TraversyMedia",
-          type: "YouTube",
+          title: "NodeJS - From Scratch to expert",
+          author: "Fernando Herrera",
+          description: "Clean Architecture, DDD, WebHooks, WebSockets, Tareas automáticas, Despliegues, TypeScript, Edge, Testing y más",
+          url: "https://www.udemy.com/course/nodejs-de-cero-a-experto/?kw=nodejs&src=sac&couponCode=MT251006G4",
+          type: "Course",
           rating: 5,
           tags: ["Web Dev", "Tutorials"]
-        }
+        },
+        {
+          title: "Dave Gray Youtube",
+          author: "Dave Gray",
+          description: "¡Tutoriales de desarrollo web con cursos completos de HTML, CSS, JavaScript, React, Node.js y más!",
+          url: "https://www.youtube.com/@DaveGrayTeachesCode/videos",
+          type: "YouTube",
+          rating: 5,
+          tags: ["Free", "Tutorials"]
+        },
       ]
     },
     {
       title: "Tools & Platforms",
       icon: Code,
-      color: "text-green-600", 
+      color: "text-green-600",
       resources: [
+        {
+          title: "HackerRank",
+          author: "HackerRank",
+          description: "HackerRank ofrece un entorno de ejecución integral que admite múltiples lenguajes y marcos de programación, lo que le permite ejecutar y evaluar su código de manera eficiente.",
+          url: "https://www.hackerrank.com/dashboard",
+          type: "Platform",
+          rating: 5,
+          tags: ["Practice", "Algorithms"]
+        },
         {
           title: "Visual Studio Code",
           author: "Microsoft",
@@ -135,49 +153,7 @@ export default function Resources() {
         }
       ]
     },
-    {
-      title: "Communities & Forums",
-      icon: Users,
-      color: "text-purple-600",
-      resources: [
-        {
-          title: "Stack Overflow",
-          author: "Stack Overflow",
-          description: "Q&A community for programmers and developers",
-          url: "https://stackoverflow.com/",
-          type: "Community",
-          rating: 5,
-          tags: ["Q&A", "Help"]
-        },
-        {
-          title: "Dev.to",
-          author: "Dev Community", 
-          description: "Community of software developers sharing knowledge",
-          url: "https://dev.to/",
-          type: "Community",
-          rating: 4,
-          tags: ["Articles", "Community"]
-        },
-        {
-          title: "Reddit - Programming",
-          author: "Reddit",
-          description: "Programming discussions, news, and learning resources",
-          url: "https://www.reddit.com/r/programming/",
-          type: "Community",
-          rating: 4,
-          tags: ["Discussion", "News"]
-        },
-        {
-          title: "Discord - Reactiflux",
-          author: "Reactiflux",
-          description: "React developers community chat and support",
-          url: "https://www.reactiflux.com/",
-          type: "Community",
-          rating: 4,
-          tags: ["React", "Chat"]
-        }
-      ]
-    }
+
   ]
 
   const getTypeIcon = (type: string) => {
@@ -233,7 +209,7 @@ export default function Resources() {
             ease: "easeInOut"
           }}
         />
-        
+
         {/* Partícula verde-teal mediana */}
         <motion.div
           className="absolute top-40 right-20 w-18 h-18 bg-gradient-to-br from-emerald-400/35 to-teal-600/35 rounded-full blur-2xl"
@@ -441,7 +417,7 @@ export default function Resources() {
       </div>
 
       <div className="container mx-auto px-4 py-20 relative z-10">
-        
+
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -450,11 +426,10 @@ export default function Resources() {
           className="text-center mb-16"
         >
           <h1 className="text-5xl lg:text-6xl font-bold mb-6">
-            <span className="text-gradient">Learning Resources</span>
+            <span className="text-gradient">Recursos de aprendizaje</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            A curated collection of books, courses, tools, and communities that have shaped 
-            my learning journey and continue to guide my development
+            Una colección de libros, cursos, herramientas y comunidades que han formado mi vieaje de aprendizaje y guía continua para mi desarrollo.
           </p>
         </motion.div>
 
@@ -548,17 +523,16 @@ export default function Resources() {
           className="mt-20 text-center"
         >
           <Card className="card-elevated p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4 text-gradient">Continuous Learning</h3>
+            <h3 className="text-2xl font-bold mb-4 text-gradient">Aprendizaje Continuo </h3>
             <p className="text-muted-foreground mb-6">
-              These resources have been instrumental in my growth as a developer. 
-              I believe in the power of continuous learning and always staying curious about new technologies.
+              Estos recursos han sido un instrumento en mi crecimiento profesional como desarrollador. Yo creo en el poder del aprendizaje continuo y siempre me mantengo curioso ante nuevas tecnologías.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/notebook" className="btn-primary inline-flex items-center justify-center">
-                View My Learning Journey
+                Ver mi viaje de aprendizaje
               </a>
               <a href="/projects" className="btn-secondary inline-flex items-center justify-center">
-                See What I've Built
+                Ver lo que he construido
               </a>
             </div>
           </Card>

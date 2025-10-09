@@ -344,9 +344,9 @@ export default function Home() {
           <p className="text-muted-foreground mb-6 lg:mb-8">Explora mi trayectoria en la tecnología y el aprendizaje</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-6 max-w-3xl mx-auto">
             {[
-              { number: "15+", label: "Projects Completed" },
-              { number: "1+", label: "Years Experience" },
-              { number: "10+", label: "Technologies Learned" },
+              { number: "15+", label: "Proyectos Completados" },
+              { number: "1+", label: "Años de experiencia" },
+              { number: "10+", label: "Tecnologías Aprendidas" },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}

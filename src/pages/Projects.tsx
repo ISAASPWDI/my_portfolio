@@ -22,7 +22,7 @@ export default function Projects() {
         "JWT",
         "MercadoPago"
       ],
-      liveUrl: "https://example-ecommerce.com",
+      liveUrl: "#nosource",
       githubUrl: "https://github.com/ISAASPWDI/clothing_ecommerce_backend",
       date: "2024",
       status: "Completed"
@@ -32,7 +32,7 @@ export default function Projects() {
       "description": "Aplicación full-stack desarrollada con Flutter, Node.js, Express.js y PostgreSQL, siguiendo principios de Clean Architecture en el backend y autenticación segura con Google y JWT.",
       "image": "/images/projects/escogebien.jpg",
       "technologies": ["Flutter", "Google Auth", "JWT", "Node.js", "Express.js", "PostgreSQL", "Clean Architecture"],
-      "liveUrl": "https://example-edu.com",
+      "liveUrl": "#nosource",
       "githubUrl": "https://github.com/ISAASPWDI/escogebien-backend",
       "date": "2025",
       "status": "Completed"
@@ -48,10 +48,78 @@ export default function Projects() {
       "status": "Completed"
     },
     {
+      "title": "Graduation Management System",
+      "description": "Sistema full-stack de gestión de graduación con módulos de registro de estudiantes, administración, chat en tiempo real y verificación de identidad nacional. Desarrollado con arquitectura de microservicios y base de datos NoSQL.",
+      "image": "/images/projects/graduated-app.jpg",
+      "technologies": [
+        "React",
+        "JavaScript",
+        "TailwindCSS",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "HTML5",
+        "CSS3"
+      ],
+      "liveUrl": "#nosource",
+      "githubUrl": "https://github.com/ISAASPWDI/graduated-app",
+      "date": "2025",
+      "status": "Completed"
+    },
+    {
+      "title": "Personal Digital Space",
+      "description": "Aplicación full-stack para gestión personal con módulos de notas, recuerdos, línea de tiempo y cumplidos. Desarrollada con tecnologías modernas y base de datos relacional.",
+      "image": "/images/projects/personal-app.jpg",
+      "technologies": [
+        "React",
+        "TypeScript",
+        "TailwindCSS",
+        "Node.js",
+        "Express.js",
+        "PostgreSQL",
+        "HTML5",
+        "CSS3"
+      ],
+      "liveUrl": "#nosource",
+      "githubUrl": "https://github.com/ISAASPWDI/love-app-backend",
+      "date": "2024",
+      "status": "Completed"
+    },
+    {
+      "title": "Attendance Tracking System",
+      "description": "Aplicación full-stack para el registro y gestión de asistencias, desarrollada con Angular y TypeScript en el frontend, y Java con Spring Boot, Spring Security, JPA y PostgreSQL en el backend. Incluye autenticación segura con JWT y despliegue con Docker.",
+      "image": "/images/projects/scholar-attendance.jpg",
+      "technologies": ["Angular", "TypeScript", "Java", "Spring Boot", "Spring Security", "JPA", "PostgreSQL", "JWT", "Docker"],
+      "liveUrl": "#nosource",
+      "githubUrl": "https://github.com/ISAASPWDI/attendance-app",
+      "date": "2025",
+      "status": "Completed"
+    },
+    {
+      "title": "Bank Application System",
+      "description": "Sistema bancario full-stack con backend robusto en Spring Boot. Incluye gestión de cuentas, transferencias seguras, procesamiento de pagos, historial de transacciones y notificaciones por email. Desarrollado con arquitectura empresarial y base de datos relacional.",
+      "image": "/images/projects/bank-app.jpg",
+      "technologies": [
+        "Java",
+        "Spring Boot",
+        "Spring Security",
+        "Spring Data JPA",
+        "MySQL",
+        "Maven",
+        "JavaMail",
+        "JWT"
+      ],
+      "liveUrl": "#nosource",
+      "githubUrl": "https://github.com/ISAASPWDI/bank-app-backend",
+      "date": "2025",
+      "status": "Completed"
+    },
+    {
       "title": "JavaScript Projects",
       "description": "Colección de aplicaciones web desarrolladas con Node.js, Express.js, HTML5, CSS3 y JavaScript Vanilla. Incluye proyectos como lista de tareas, carrito de compras, calculadoras y formularios, aplicando validación con Regex, arquitectura modular y diseño responsivo.",
       "image": "/images/projects/little-projects.jpg",
       "technologies": ["Node.js", "Express.js", "HTML5", "CSS3", "JavaScript", "Regex", "Responsive Design"],
+      "liveUrl": "#nosource",
       "githubUrl": "https://github.com/ISAASPWDI/personalProjects",
       "date": "2023",
       "status": "Completed"
@@ -60,7 +128,7 @@ export default function Projects() {
       "title": "StudySync",
       "description": "Aplicación de emparejamiento académico inspirada en Tinder, desarrollada con Flutter para el frontend, Nest.js y TypeScript para el backend, MongoDB como base de datos y un modelo supervisado de ML con KNN construido en Python y FastAPI. Incluye autenticación segura con Google, GitHub y JWT.",
       "image": "/images/projects/studysync.jpg",
-      "technologies": ["Flutter", "Next.js", "TypeScript", "MongoDB", "Python", "FastAPI", "KNN", "JWT", "Google Auth", "GitHub Auth"],
+      "technologies": ["Flutter", "Nest.js", "TypeScript", "MongoDB", "Python", "FastAPI", "Docker", "JWT", "Google Auth", "GitHub Auth"],
       "liveUrl": "#",
       "githubUrl": "#",
       "date": "2025",
@@ -76,16 +144,7 @@ export default function Projects() {
       "date": "2025",
       "status": "In Progress"
     },
-    {
-      "title": "Attendance Tracking System",
-      "description": "Aplicación full-stack para el registro y gestión de asistencias, desarrollada con Angular y TypeScript en el frontend, y Java con Spring Boot, Spring Security, JPA y PostgreSQL en el backend. Incluye autenticación segura con JWT y despliegue con Docker.",
-      "image": "/images/projects/scholar-attendance.jpg",
-      "technologies": ["Angular", "TypeScript", "Java", "Spring Boot", "Spring Security", "JPA", "PostgreSQL", "JWT", "Docker"],
-      "liveUrl": "#",
-      "githubUrl": "#",
-      "date": "2025",
-      "status": "Planning"
-    }
+
 
 
 
