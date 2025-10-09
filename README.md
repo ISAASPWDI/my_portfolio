@@ -1,73 +1,140 @@
-# Welcome to your Lovable project
+# 💼 Mi Portfolio Personal
 
-## Project info
+Un portafolio web personal desarrollado con tecnologías modernas para mostrar mi experiencia, habilidades y proyectos de manera profesional y atractiva.
 
-**URL**: https://lovable.dev/projects/14733897-55c9-4843-88ba-c15e63644178
+## 🚀 Tecnologías Utilizadas
 
-## How can I edit this code?
+- **React** - Biblioteca de JavaScript para construir interfaces de usuario
+- **TypeScript** - Superset de JavaScript que añade tipado estático
+- **Tailwind CSS** - Framework de CSS para diseño rápido y responsive
+- **Vite** - Build tool rápido y moderno
 
-There are several ways of editing your application.
+## ✨ Características
 
-**Use Lovable**
+- 🎨 Diseño moderno y responsive
+- 🌙 Modo oscuro/claro
+- 📱 Optimizado para dispositivos móviles
+- ⚡ Carga rápida y optimizada
+- 🔍 SEO friendly
+- 📧 Formulario de contacto funcional
+- 🎯 Secciones organizadas (Sobre mí, Proyectos, Habilidades, Contacto)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/14733897-55c9-4843-88ba-c15e63644178) and start prompting.
+## 🛠️ Instalación y Configuración
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerrequisitos
 
-**Use your preferred IDE**
+- Node.js (versión 16 o superior)
+- npm o yarn
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Pasos de instalación
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. **Clona el repositorio**
+   ```bash
+   git clone https://github.com/tu-usuario/tu-portfolio.git
+   cd tu-portfolio
+   ```
 
-Follow these steps:
+2. **Instala las dependencias**
+   ```bash
+   npm install
+   # o
+   yarn install
+   ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+3. **Ejecuta el proyecto en desarrollo**
+   ```bash
+   npm run dev
+   # o
+   yarn dev
+   ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+4. **Construye para producción**
+   ```bash
+   npm run build
+   # o
+   yarn build
+   ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+5. **Previsualiza la build de producción**
+   ```bash
+   npm run preview
+   # o
+   yarn preview
+   ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+## 📁 Estructura del Proyecto
+
+```
+├── public/                 # Archivos estáticos
+├── src/
+│   ├── components/        # Componentes reutilizables
+│   ├── pages/            # Páginas de la aplicación
+│   ├── hooks/            # Custom hooks
+│   ├── utils/            # Utilidades y helpers
+│   ├── styles/           # Archivos de estilos
+│   ├── assets/           # Imágenes y recursos
+│   └── types/            # Definiciones de TypeScript
+├── .gitignore
+├── package.json
+├── tailwind.config.ts
+├── tsconfig.json
+└── vite.config.ts
 ```
 
-**Edit a file directly in GitHub**
+## 🎨 Personalización
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Colores y Tema
+Los colores principales se pueden modificar en `tailwind.config.ts`:
 
-**Use GitHub Codespaces**
+```typescript
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          // Tus colores personalizados
+        }
+      }
+    }
+  }
+}
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Contenido
+- Edita la información personal en `src/data/personal.ts`
+- Actualiza los proyectos en `src/data/projects.ts`
+- Modifica las habilidades en `src/data/skills.ts`
 
-## What technologies are used for this project?
+## 🌐 Despliegue
 
-This project is built with:
+Este proyecto está configurado para ser desplegado fácilmente en:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- **Vercel**: Conecta tu repositorio y despliega automáticamente
+- **Netlify**: Arrastra y suelta la carpeta `dist` después de hacer build
+- **GitHub Pages**: Usa GitHub Actions para despliegue automático
 
-## How can I deploy this project?
+### Despliegue en Vercel
 
-Simply open [Lovable](https://lovable.dev/projects/14733897-55c9-4843-88ba-c15e63644178) and click on Share -> Publish.
+1. Conecta tu repositorio a Vercel
+2. Configura el build command: `npm run build`
+3. Configura el output directory: `dist`
+4. Despliega
 
-## Can I connect a custom domain to my Lovable project?
+## 📝 Scripts Disponibles
 
-Yes, you can!
+- `npm run dev` - Ejecuta el servidor de desarrollo
+- `npm run build` - Construye la aplicación para producción
+- `npm run preview` - Previsualiza la build de producción
+- `npm run lint` - Ejecuta el linter
+- `npm run type-check` - Verifica los tipos de TypeScript
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 📞 Contacto
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- **Email**: stivensAA04@outlook.com
+- **LinkedIn**: [Tu Perfil](https://www.linkedin.com/in/stevens-aliaga-arauco-05bb39226/)
+- **GitHub**: [Tu GitHub](https://github.com/ISAASPWDI)
+- **Portfolio**: [Tu Portfolio](https://myportfolio-eight-lake-84.vercel.app/)
+
+---
+
+⭐ Si te gusta este proyecto, no olvides darle una estrella en GitHub!
