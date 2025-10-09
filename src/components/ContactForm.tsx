@@ -8,12 +8,20 @@ import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { useToast } from "@/hooks/use-toast"
 import { Send, CheckCircle } from "lucide-react"
+import emailjs from "@emailjs/browser"
 
 interface ContactFormData {
   name: string
   email: string
   subject: string
   message: string
+}
+
+// EMAILJS CONFIGURATION
+const EMAILJS_CONFIG = {
+  PUBLIC_KEY: "uv7rGhuC8QRs8Uo79",
+  SERVICE_ID: "service_7v8oewe",
+  TEMPLATE_ID: "template_1oaueul",
 }
 
 export function ContactForm() {
@@ -25,28 +33,55 @@ export function ContactForm() {
     register,
     handleSubmit,
     formState: { errors },
-    reset
+    reset,
   } = useForm<ContactFormData>()
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000))
+    try {
+      // Initialize EmailJS with your Public Key
+      emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY)
 
-    console.log('Form submitted:', data)
+      // ✅ FIXED: Variables matching your template
+      const templateParams = {
+        name: data.name, // Matches {{name}} in your template
+        email: data.email, // Matches {{email}} in your template
+        subject: data.subject, // Matches {{subject}} in your template
+        message: data.message, // Matches {{message}} in your template
+      }
 
-    toast({
-      title: "Message sent successfully!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    })
+      // Send the email
+      const response = await emailjs.send(
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.TEMPLATE_ID,
+        templateParams
+      )
 
-    setIsSubmitted(true)
-    setIsSubmitting(false)
-    reset()
+      console.log("Email sent successfully:", response)
 
-    // Reset success state after 3 seconds
-    setTimeout(() => setIsSubmitted(false), 3000)
+      toast({
+        title: "Message sent successfully!",
+        description: "Thank you for reaching out. I’ll get back to you soon.",
+      })
+
+      setIsSubmitted(true)
+      reset()
+
+      // Reset success state after 5 seconds
+      setTimeout(() => setIsSubmitted(false), 5000)
+    } catch (error) {
+      console.error("Error sending email:", error)
+
+      toast({
+        title: "Error sending message",
+        description:
+          "Please try again or contact me directly via email.",
+        variant: "destructive",
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   if (isSubmitted) {
@@ -64,9 +99,11 @@ export function ContactForm() {
           >
             <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
           </motion.div>
-          <h3 className="text-2xl font-bold mb-2 text-gradient">Message Sent!</h3>
+          <h3 className="text-2xl font-bold mb-2 text-gradient">
+            Message Sent!
+          </h3>
           <p className="text-muted-foreground">
-            Thank you for reaching out. I'll get back to you as soon as possible.
+            Thank you for contacting me. I’ll reply as soon as possible.
           </p>
         </Card>
       </motion.div>
@@ -80,7 +117,7 @@ export function ContactForm() {
       transition={{ duration: 0.8 }}
     >
       <Card className="card-elevated p-8">
-        <h3 className="text-2xl font-bold mb-6 text-gradient">Let's talk</h3>
+        <h3 className="text-2xl font-bold mb-6 text-gradient">Let’s Talk</h3>
 
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
           <div className="grid md:grid-cols-2 gap-4">
@@ -93,7 +130,9 @@ export function ContactForm() {
                 className={errors.name ? "border-destructive" : ""}
               />
               {errors.name && (
-                <p className="text-sm text-destructive">{errors.name.message}</p>
+                <p className="text-sm text-destructive">
+                  {errors.name.message}
+                </p>
               )}
             </div>
 
@@ -107,13 +146,15 @@ export function ContactForm() {
                   required: "Email is required",
                   pattern: {
                     value: /^\S+@\S+$/i,
-                    message: "Invalid email address"
-                  }
+                    message: "Invalid email address",
+                  },
                 })}
                 className={errors.email ? "border-destructive" : ""}
               />
               {errors.email && (
-                <p className="text-sm text-destructive">{errors.email.message}</p>
+                <p className="text-sm text-destructive">
+                  {errors.email.message}
+                </p>
               )}
             </div>
           </div>
@@ -122,12 +163,14 @@ export function ContactForm() {
             <Label htmlFor="subject">Subject</Label>
             <Input
               id="subject"
-              placeholder="What is it about?"
+              placeholder="What is this about?"
               {...register("subject", { required: "Subject is required" })}
               className={errors.subject ? "border-destructive" : ""}
             />
             {errors.subject && (
-              <p className="text-sm text-destructive">{errors.subject.message}</p>
+              <p className="text-sm text-destructive">
+                {errors.subject.message}
+              </p>
             )}
           </div>
 
@@ -135,12 +178,16 @@ export function ContactForm() {
             <Label htmlFor="message">Message</Label>
             <Textarea
               id="message"
-              placeholder="Tell me about your project, your question, or just say hi..."
-              className={`min-h-[120px] resize-none ${errors.message ? "border-destructive" : ""}`}
+              placeholder="Tell me about your project, inquiry, or just say hello..."
+              className={`min-h-[120px] resize-none ${
+                errors.message ? "border-destructive" : ""
+              }`}
               {...register("message", { required: "Message is required" })}
             />
             {errors.message && (
-              <p className="text-sm text-destructive">{errors.message.message}</p>
+              <p className="text-sm text-destructive">
+                {errors.message.message}
+              </p>
             )}
           </div>
 

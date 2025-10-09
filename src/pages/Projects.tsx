@@ -8,7 +8,8 @@ export default function Projects() {
   const projects = [
     {
       title: "Clothing E-Commerce Platform",
-      description: "Full-stack application developed with Next.js, React, Redux, Node.js, Prisma, MySQL, following Clean Architecture principles in the backend with GraphQL and secure authentication using JWT.",
+      description:
+        "Full-stack application developed with Next.js, React, Redux, Node.js, Prisma, and MySQL, following Clean Architecture principles in the backend with GraphQL and secure authentication using JWT.",
       image: "/images/projects/first.jpg",
       technologies: [
         "Tailwind CSS",
@@ -20,73 +21,201 @@ export default function Projects() {
         "MySQL",
         "Prisma",
         "JWT",
-        "MercadoPago"
+        "MercadoPago",
       ],
-      liveUrl: "https://example-ecommerce.com",
+      liveUrl: "#nosource",
       githubUrl: "https://github.com/ISAASPWDI/clothing_ecommerce_backend",
       date: "2024",
-      status: "Completed"
+      status: "Completed",
     },
     {
       title: "Educational Empowerment Platform",
-      description: "Full-stack application developed with Flutter, Node.js, Express.js, and PostgreSQL, following Clean Architecture principles in the backend with secure authentication using Google and JWT.",
+      description:
+        "Full-stack application developed with Flutter, Node.js, Express.js, and PostgreSQL, following Clean Architecture principles in the backend and secure authentication using Google and JWT.",
       image: "/images/projects/escogebien.jpg",
-      technologies: ["Flutter", "Google Auth", "JWT", "Node.js", "Express.js", "PostgreSQL", "Clean Architecture"],
-      liveUrl: "https://example-edu.com",
+      technologies: [
+        "Flutter",
+        "Google Auth",
+        "JWT",
+        "Node.js",
+        "Express.js",
+        "PostgreSQL",
+        "Clean Architecture",
+      ],
+      liveUrl: "#nosource",
       githubUrl: "https://github.com/ISAASPWDI/escogebien-backend",
       date: "2025",
-      status: "Completed"
+      status: "Completed",
     },
     {
       title: "UNCP Library System",
-      description: "Full-stack application developed with HTML, CSS, Bootstrap, JavaScript, Node.js, Express.js, and SQL Server, converted into a desktop application with Electron, including PDF report generation using PDFKit.",
+      description:
+        "Full-stack application developed with HTML, CSS, Bootstrap, JavaScript, Node.js, Express.js, and SQL Server, converted into a desktop app with Electron, featuring PDF report generation using PDFKit.",
       image: "/images/projects/biblioteca.jpg",
-      technologies: ["HTML5", "CSS3", "Bootstrap", "JavaScript", "Node.js", "Express.js", "SQL Server", "Electron", "PDFKit"],
+      technologies: [
+        "HTML5",
+        "CSS3",
+        "Bootstrap",
+        "JavaScript",
+        "Node.js",
+        "Express.js",
+        "SQL Server",
+        "Electron",
+        "PDFKit",
+      ],
       liveUrl: "#nosource",
       githubUrl: "https://github.com/ISAASPWDI/sistema-de-biblioteca-UNCP",
       date: "2024",
-      status: "Completed"
+      status: "Completed",
     },
     {
-      title: "JavaScript Projects",
-      description: "Collection of web applications developed with Node.js, Express.js, HTML5, CSS3, and vanilla JavaScript. Includes projects like task lists, shopping carts, calculators, and forms, applying validation with Regex, modular architecture, and responsive design.",
-      image: "/images/projects/little-projects.jpg",
-      technologies: ["Node.js", "Express.js", "HTML5", "CSS3", "JavaScript", "Regex", "Responsive Design"],
-      githubUrl: "https://github.com/ISAASPWDI/personalProjects",
-      date: "2023",
-      status: "Completed"
-    },
-    {
-      title: "StudySync",
-      description: "Academic matching application inspired by Tinder, developed with Flutter for the frontend, Nest.js and TypeScript for the backend, MongoDB as database, and a supervised ML model with KNN built in Python and FastAPI. Includes secure authentication with Google, GitHub, and JWT.",
-      image: "/images/projects/studysync.jpg",
-      technologies: ["Flutter", "Next.js", "TypeScript", "MongoDB", "Python", "FastAPI", "KNN", "JWT", "Google Auth", "GitHub Auth"],
-      liveUrl: "#",
-      githubUrl: "#",
+      title: "Graduation Management System",
+      description:
+        "Full-stack graduation management system featuring student registration, administration modules, real-time chat, and national identity verification. Developed using a microservices architecture and NoSQL database.",
+      image: "/images/projects/graduated-app.jpg",
+      technologies: [
+        "React",
+        "JavaScript",
+        "TailwindCSS",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "HTML5",
+        "CSS3",
+      ],
+      liveUrl: "#nosource",
+      githubUrl: "https://github.com/ISAASPWDI/graduated-app",
       date: "2025",
-      status: "In Progress"
+      status: "Completed",
     },
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce application for managing a wide variety of products, developed with React, Redux, and Tailwind CSS on the frontend, and Java with Spring Boot, Spring Security, Spring Data, and MySQL on the backend. Includes JWT authentication, REST microservices architecture, deployment on AWS, and containerization with Docker.",
-      image: "/images/projects/java-ecommerce.jpg",
-      technologies: ["React", "Redux", "Tailwind CSS", "Java", "Spring Boot", "Spring Security", "Spring Data", "MySQL", "JWT", "AWS", "Docker"],
-      liveUrl: "#",
-      githubUrl: "#",
-      date: "2025",
-      status: "In Progress"
+      title: "Personal Digital Space",
+      description:
+        "Full-stack personal management application with modules for notes, memories, timelines, and compliments. Developed using modern technologies and a relational database.",
+      image: "/images/projects/personal-app.jpg",
+      technologies: [
+        "React",
+        "TypeScript",
+        "TailwindCSS",
+        "Node.js",
+        "Express.js",
+        "PostgreSQL",
+        "HTML5",
+        "CSS3",
+      ],
+      liveUrl: "#nosource",
+      githubUrl: "https://github.com/ISAASPWDI/love-app-backend",
+      date: "2024",
+      status: "Completed",
     },
     {
       title: "Attendance Tracking System",
-      description: "Full-stack application for attendance tracking and management, developed with Angular and TypeScript on the frontend, and Java with Spring Boot, Spring Security, JPA, and PostgreSQL on the backend. Includes secure JWT authentication and deployment with Docker.",
+      description:
+        "Full-stack application for attendance registration and management, developed with Angular and TypeScript on the frontend, and Java with Spring Boot, Spring Security, JPA, and PostgreSQL on the backend. Includes secure authentication using JWT and deployment with Docker.",
       image: "/images/projects/scholar-attendance.jpg",
-      technologies: ["Angular", "TypeScript", "Java", "Spring Boot", "Spring Security", "JPA", "PostgreSQL", "JWT", "Docker"],
+      technologies: [
+        "Angular",
+        "TypeScript",
+        "Java",
+        "Spring Boot",
+        "Spring Security",
+        "JPA",
+        "PostgreSQL",
+        "JWT",
+        "Docker",
+      ],
+      liveUrl: "#nosource",
+      githubUrl: "https://github.com/ISAASPWDI/attendance-app",
+      date: "2025",
+      status: "Completed",
+    },
+    {
+      title: "Bank Application System",
+      description:
+        "Full-stack banking system with a robust Spring Boot backend. Includes account management, secure transfers, payment processing, transaction history, and email notifications. Developed with enterprise architecture and a relational database.",
+      image: "/images/projects/bank-app.jpg",
+      technologies: [
+        "Java",
+        "Spring Boot",
+        "Spring Security",
+        "Spring Data JPA",
+        "MySQL",
+        "Maven",
+        "JavaMail",
+        "JWT",
+      ],
+      liveUrl: "#nosource",
+      githubUrl: "https://github.com/ISAASPWDI/bank-app-backend",
+      date: "2025",
+      status: "Completed",
+    },
+    {
+      title: "JavaScript Projects",
+      description:
+        "Collection of web applications developed with Node.js, Express.js, HTML5, CSS3, and Vanilla JavaScript. Includes projects such as task lists, shopping carts, calculators, and forms, featuring Regex validation, modular architecture, and responsive design.",
+      image: "/images/projects/little-projects.jpg",
+      technologies: [
+        "Node.js",
+        "Express.js",
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Regex",
+        "Responsive Design",
+      ],
+      liveUrl: "#nosource",
+      githubUrl: "https://github.com/ISAASPWDI/personalProjects",
+      date: "2023",
+      status: "Completed",
+    },
+    {
+      title: "StudySync",
+      description:
+        "Academic matchmaking application inspired by Tinder, developed with Flutter for the frontend, Nest.js and TypeScript for the backend, MongoDB as the database, and a supervised ML model using KNN built with Python and FastAPI. Includes secure authentication with Google, GitHub, and JWT.",
+      image: "/images/projects/studysync.jpg",
+      technologies: [
+        "Flutter",
+        "Nest.js",
+        "TypeScript",
+        "MongoDB",
+        "Python",
+        "FastAPI",
+        "Docker",
+        "JWT",
+        "Google Auth",
+        "GitHub Auth",
+      ],
       liveUrl: "#",
       githubUrl: "#",
       date: "2025",
-      status: "Planning"
-    }
-  ]
+      status: "In Progress",
+    },
+    {
+      title: "E-Commerce Platform",
+      description:
+        "Full-stack e-commerce application for managing a wide range of products, developed with React, Redux, and Tailwind CSS on the frontend, and Java with Spring Boot, Spring Security, Spring Data, and MySQL on the backend. Includes JWT authentication, REST microservices architecture, AWS deployment, and Docker containerization.",
+      image: "/images/projects/java-ecommerce.jpg",
+      technologies: [
+        "React",
+        "Redux",
+        "Tailwind CSS",
+        "Java",
+        "Spring Boot",
+        "Spring Security",
+        "Spring Data",
+        "MySQL",
+        "JWT",
+        "AWS",
+        "Docker",
+      ],
+      liveUrl: "#",
+      githubUrl: "#",
+      date: "2025",
+      status: "In Progress",
+    },
+  ];
+
+
 
 
   const getStatusColor = (status: string) => {
