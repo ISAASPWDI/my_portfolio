@@ -28,7 +28,7 @@ export default function Home() {
       title: "Experiencia",
       items: [
         { degree: "Backend developer", description: "Tecnovedades Web • Ago 2024 – Ago 2025 (1 año)" },
-        { degree: "Backend developer", description: "Holinsys • Feb 2022 – Oct 2022 (8 meses)" }
+        { degree: "Backend developer", description: "Casamarket • Set 2023 – May 2024 (8 meses)" }
       ]
     },
     {
