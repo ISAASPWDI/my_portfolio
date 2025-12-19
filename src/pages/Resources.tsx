@@ -2,160 +2,459 @@ import { motion } from "framer-motion"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { ExternalLink, BookOpen, Video, Globe, Code, Users, Star } from "lucide-react"
+import { ExternalLink, BookOpen, Video, Globe, Code, Users, Star, Palette, Server, Trophy } from "lucide-react"
 
 export default function Resources() {
-  const resourceCategories = [
-    {
-      title: "Books & Documentation",
-      icon: BookOpen,
-      color: "text-blue-600",
-      resources: [
-        {
-          title: "You Don't Know JS (Book Series)",
-          author: "Kyle Simpson",
-          description: "Profundización en los fundamentos de JavaScript y conceptos avanzados",
-          url: "https://github.com/getify/You-Dont-Know-JS",
-          type: "Book",
-          rating: 5,
-          tags: ["JavaScript", "Fundamentals"]
-        },
-        {
-          title: "React Documentation",
-          author: "React Team",
-          description: "Documentación oficial de React con tutoriales y referencia de API",
-          url: "https://react.dev/",
-          type: "Documentation",
-          rating: 5,
-          tags: ["React", "Reference"]
-        },
-        {
-          title: "Nestjs Documentation",
-          author: "Kamil Mysliwiec",
-          description: "Un framework progresivo de NodeJS para construir aplicaciones del lado del servidor eficientes, confiables y escalables.",
-          url: "https://docs.nestjs.com/",
-          type: "Documentation",
-          rating: 5,
-          tags: ["Nestjs", "Nodejs", "TypeScript", "Programming"]
-        },
-        {
-          title: "MDN Web Docs",
-          author: "Mozilla",
-          description: "Documentación y tutoriales completos sobre desarrollo web",
-          url: "https://developer.mozilla.org/",
-          type: "Documentation",
-          rating: 5,
-          tags: ["Web Dev", "Reference"]
-        }
-      ]
-    },
-    {
-      title: "Video Courses & Tutorials",
-      icon: Video,
-      color: "text-red-600",
-      resources: [
-        {
-          title: "The Complete JavaScript Course 2024",
-          author: "Jonas Schmedtmann",
-          description: "From zero to expert: Node.js, ES6+, NPM, Parcel, Babel",
-          url: "https://www.udemy.com/course/the-complete-javascript-course/",
-          type: "Course",
-          rating: 5,
-          tags: ["JavaScript", "Full Course"]
-        },
-        {
-          title: "React - From Scratch to expert",
-          author: "Fernando Herrera",
-          description: "Learn React, Redux, React Hooks, React Router & more",
-          url: "https://www.udemy.com/course/react-cero-experto/",
-          type: "Course",
-          rating: 5,
-          tags: ["React", "Redux"]
-        },
-        {
-          title: "JonMircha Youtube",
-          author: "Jonmircha",
-          description: "Tutoriales de programación gratuitos y cursos completos",
-          url: "https://www.youtube.com/@jonmircha/featured",
-          type: "YouTube",
-          rating: 5,
-          tags: ["Free", "Tutorials"]
-        },
-        {
-          title: "NodeJS - From Scratch to expert",
-          author: "Fernando Herrera",
-          description: "Clean Architecture, DDD, WebHooks, WebSockets, Tareas automáticas, Despliegues, TypeScript, Edge, Testing y más",
-          url: "https://www.udemy.com/course/nodejs-de-cero-a-experto/?kw=nodejs&src=sac&couponCode=MT251006G4",
-          type: "Course",
-          rating: 5,
-          tags: ["Web Dev", "Tutorials"]
-        },
-        {
-          title: "Dave Gray Youtube",
-          author: "Dave Gray",
-          description: "¡Tutoriales de desarrollo web con cursos completos de HTML, CSS, JavaScript, React, Node.js y más!",
-          url: "https://www.youtube.com/@DaveGrayTeachesCode/videos",
-          type: "YouTube",
-          rating: 5,
-          tags: ["Free", "Tutorials"]
-        },
-      ]
-    },
-    {
-      title: "Tools & Platforms",
-      icon: Code,
-      color: "text-green-600",
-      resources: [
-        {
-          title: "HackerRank",
-          author: "HackerRank",
-          description: "HackerRank ofrece un entorno de ejecución integral que admite múltiples lenguajes y marcos de programación, lo que le permite ejecutar y evaluar su código de manera eficiente.",
-          url: "https://www.hackerrank.com/dashboard",
-          type: "Platform",
-          rating: 5,
-          tags: ["Practice", "Algorithms"]
-        },
-        {
-          title: "Visual Studio Code",
-          author: "Microsoft",
-          description: "Powerful, free code editor with extensive extension ecosystem",
-          url: "https://code.visualstudio.com/",
-          type: "Tool",
-          rating: 5,
-          tags: ["Editor", "IDE"]
-        },
-        {
-          title: "GitHub",
-          author: "GitHub",
-          description: "Version control, collaboration, and code hosting platform",
-          url: "https://github.com/",
-          type: "Platform",
-          rating: 5,
-          tags: ["Git", "Collaboration"]
-        },
-        {
-          title: "CodePen",
-          author: "CodePen",
-          description: "Online code editor and learning environment for front-end",
-          url: "https://codepen.io/",
-          type: "Platform",
-          rating: 4,
-          tags: ["Frontend", "Playground"]
-        },
-        {
-          title: "Figma",
-          author: "Figma",
-          description: "Collaborative design tool for UI/UX design and prototyping",
-          url: "https://www.figma.com/",
-          type: "Tool",
-          rating: 5,
-          tags: ["Design", "UI/UX"]
-        }
-      ]
-    },
-
-  ]
-
+const resourceCategories = [
+  {
+    title: "Libros y Documentación",
+    icon: BookOpen,
+    color: "text-blue-600",
+    resources: [
+      {
+        title: "You Don't Know JS (Serie de Libros)",
+        author: "Kyle Simpson",
+        description: "Profundización en los fundamentos de JavaScript y conceptos avanzados",
+        url: "https://github.com/getify/You-Dont-Know-JS",
+        type: "Book",
+        rating: 5,
+        tags: ["JavaScript", "Fundamentos"]
+      },
+      {
+        title: "Documentación de React",
+        author: "Equipo de React",
+        description: "Documentación oficial de React con tutoriales y referencia de API",
+        url: "https://react.dev/",
+        type: "Documentation",
+        rating: 5,
+        tags: ["React", "Referencia"]
+      },
+      {
+        title: "Documentación de NestJS",
+        author: "Kamil Mysliwiec",
+        description: "Un framework progresivo de NodeJS para construir aplicaciones del lado del servidor eficientes, confiables y escalables.",
+        url: "https://docs.nestjs.com/",
+        type: "Documentation",
+        rating: 5,
+        tags: ["NestJS", "NodeJS", "TypeScript"]
+      },
+      {
+        title: "MDN Web Docs",
+        author: "Mozilla",
+        description: "Documentación y tutoriales completos sobre desarrollo web",
+        url: "https://developer.mozilla.org/",
+        type: "Documentation",
+        rating: 5,
+        tags: ["Desarrollo Web", "Referencia"]
+      },
+      {
+        title: "Documentación de Bootstrap",
+        author: "Bootstrap Team",
+        description: "Framework CSS más popular para desarrollo responsive",
+        url: "https://getbootstrap.com/docs/",
+        type: "Documentation",
+        rating: 5,
+        tags: ["CSS", "Bootstrap", "Frontend"]
+      },
+      {
+        title: "Documentación de Tailwind CSS",
+        author: "Tailwind Labs",
+        description: "Framework CSS utility-first para diseño web moderno",
+        url: "https://tailwindcss.com/docs",
+        type: "Documentation",
+        rating: 5,
+        tags: ["CSS", "Tailwind", "Frontend"]
+      },
+      {
+        title: "Documentación de Django",
+        author: "Django Software Foundation",
+        description: "Framework web de Python de alto nivel que fomenta el desarrollo rápido",
+        url: "https://docs.djangoproject.com/",
+        type: "Documentation",
+        rating: 5,
+        tags: ["Python", "Django", "Backend"]
+      },
+      {
+        title: "Documentación de TypeScript",
+        author: "Microsoft",
+        description: "Superset tipado de JavaScript que compila a JavaScript plano",
+        url: "https://www.typescriptlang.org/docs/",
+        type: "Documentation",
+        rating: 5,
+        tags: ["TypeScript", "JavaScript"]
+      }
+    ]
+  },
+  {
+    title: "Cursos en Video y Tutoriales",
+    icon: Video,
+    color: "text-red-600",
+    resources: [
+      {
+        title: "Curso Completo de JavaScript 2024",
+        author: "Jonas Schmedtmann",
+        description: "De cero a experto: Node.js, ES6+, NPM, Parcel, Babel",
+        url: "https://www.udemy.com/course/the-complete-javascript-course/",
+        type: "Course",
+        rating: 5,
+        tags: ["JavaScript", "Curso Completo"]
+      },
+      {
+        title: "React - De cero a experto",
+        author: "Fernando Herrera",
+        description: "Aprende React, Redux, React Hooks, React Router y más",
+        url: "https://www.udemy.com/course/react-cero-experto/",
+        type: "Course",
+        rating: 5,
+        tags: ["React", "Redux"]
+      },
+      {
+        title: "NodeJS - De cero a experto",
+        author: "Fernando Herrera",
+        description: "Clean Architecture, DDD, WebHooks, WebSockets, Tareas automáticas, Despliegues, TypeScript",
+        url: "https://www.udemy.com/course/nodejs-de-cero-a-experto/",
+        type: "Course",
+        rating: 5,
+        tags: ["NodeJS", "Backend"]
+      },
+      {
+        title: "JonMircha Youtube",
+        author: "Jonmircha",
+        description: "Tutoriales de programación gratuitos y cursos completos",
+        url: "https://www.youtube.com/@jonmircha",
+        type: "YouTube",
+        rating: 5,
+        tags: ["Gratis", "Tutoriales"]
+      },
+      {
+        title: "Dave Gray Youtube",
+        author: "Dave Gray",
+        description: "Tutoriales de desarrollo web con cursos completos de HTML, CSS, JavaScript, React, Node.js",
+        url: "https://www.youtube.com/@DaveGrayTeachesCode",
+        type: "YouTube",
+        rating: 5,
+        tags: ["Gratis", "Tutoriales"]
+      },
+      {
+        title: "HTML y CSS Curso Completo",
+        author: "freeCodeCamp",
+        description: "Curso completo de HTML5 y CSS3 desde cero",
+        url: "https://www.youtube.com/watch?v=mU6anWqZJcc",
+        type: "YouTube",
+        rating: 5,
+        tags: ["HTML", "CSS", "Frontend"]
+      },
+      {
+        title: "Django para Principiantes",
+        author: "Corey Schafer",
+        description: "Serie completa de Django desde conceptos básicos hasta avanzados",
+        url: "https://www.youtube.com/watch?v=UmljXZIypDc&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p",
+        type: "YouTube",
+        rating: 5,
+        tags: ["Django", "Python", "Backend"]
+      },
+      {
+        title: "Python para Todos",
+        author: "freeCodeCamp Español",
+        description: "Curso completo de Python desde cero",
+        url: "https://www.youtube.com/watch?v=rfscVS0vtbw",
+        type: "YouTube",
+        rating: 5,
+        tags: ["Python", "Programación"]
+      },
+      {
+        title: "APIs REST con Django",
+        author: "Django Rest Framework",
+        description: "Tutorial oficial para crear APIs RESTful con Django",
+        url: "https://www.django-rest-framework.org/tutorial/quickstart/",
+        type: "Course",
+        rating: 5,
+        tags: ["Django", "REST API", "Backend"]
+      },
+      {
+        title: "Flexbox CSS - Guía Completa",
+        author: "Fazt",
+        description: "Tutorial completo sobre Flexbox para diseño responsive",
+        url: "https://www.youtube.com/watch?v=AAWLPwQVjnY",
+        type: "YouTube",
+        rating: 4,
+        tags: ["CSS", "Flexbox", "Diseño"]
+      },
+      {
+        title: "Grid CSS - Curso Completo",
+        author: "Fazt",
+        description: "Aprende CSS Grid Layout desde cero",
+        url: "https://www.youtube.com/watch?v=QBOUSrMqlSQ",
+        type: "YouTube",
+        rating: 4,
+        tags: ["CSS", "Grid", "Diseño"]
+      },
+      {
+        title: "Microservicios con Docker y Kubernetes",
+        author: "Pelado Nerd",
+        description: "Implementación de arquitectura de microservicios",
+        url: "https://www.youtube.com/watch?v=oTf0KxK1QNo",
+        type: "YouTube",
+        rating: 4,
+        tags: ["Microservicios", "Docker", "Kubernetes"]
+      }
+    ]
+  },
+  {
+    title: "Herramientas y Plataformas",
+    icon: Code,
+    color: "text-green-600",
+    resources: [
+      {
+        title: "Visual Studio Code",
+        author: "Microsoft",
+        description: "Editor de código potente y gratuito con extenso ecosistema de extensiones",
+        url: "https://code.visualstudio.com/",
+        type: "Tool",
+        rating: 5,
+        tags: ["Editor", "IDE"]
+      },
+      {
+        title: "GitHub",
+        author: "GitHub",
+        description: "Control de versiones, colaboración y plataforma de alojamiento de código",
+        url: "https://github.com/",
+        type: "Platform",
+        rating: 5,
+        tags: ["Git", "Colaboración"]
+      },
+      {
+        title: "CodePen",
+        author: "CodePen",
+        description: "Editor de código online y entorno de aprendizaje para frontend",
+        url: "https://codepen.io/",
+        type: "Platform",
+        rating: 4,
+        tags: ["Frontend", "Playground"]
+      },
+      {
+        title: "Figma",
+        author: "Figma",
+        description: "Herramienta de diseño colaborativo para diseño UI/UX y prototipado",
+        url: "https://www.figma.com/",
+        type: "Tool",
+        rating: 5,
+        tags: ["Diseño", "UI/UX"]
+      },
+      {
+        title: "HackerRank",
+        author: "HackerRank",
+        description: "Plataforma para practicar programación y resolver desafíos algorítmicos",
+        url: "https://www.hackerrank.com/",
+        type: "Platform",
+        rating: 5,
+        tags: ["Práctica", "Algoritmos"]
+      },
+      {
+        title: "Postman",
+        author: "Postman",
+        description: "Plataforma de colaboración para desarrollo y testing de APIs",
+        url: "https://www.postman.com/",
+        type: "Tool",
+        rating: 5,
+        tags: ["API", "Testing"]
+      },
+      {
+        title: "Docker Hub",
+        author: "Docker",
+        description: "Repositorio de contenedores Docker para despliegue de aplicaciones",
+        url: "https://hub.docker.com/",
+        type: "Platform",
+        rating: 5,
+        tags: ["Docker", "Contenedores"]
+      },
+      {
+        title: "Vercel",
+        author: "Vercel",
+        description: "Plataforma de despliegue para aplicaciones frontend y fullstack",
+        url: "https://vercel.com/",
+        type: "Platform",
+        rating: 5,
+        tags: ["Despliegue", "Frontend"]
+      },
+      {
+        title: "Netlify",
+        author: "Netlify",
+        description: "Plataforma de hosting y serverless para aplicaciones web modernas",
+        url: "https://www.netlify.com/",
+        type: "Platform",
+        rating: 5,
+        tags: ["Hosting", "Serverless"]
+      },
+      {
+        title: "Railway",
+        author: "Railway",
+        description: "Plataforma de despliegue para aplicaciones backend y bases de datos",
+        url: "https://railway.app/",
+        type: "Platform",
+        rating: 4,
+        tags: ["Backend", "Despliegue"]
+      }
+    ]
+  },
+  {
+    title: "Recursos Frontend",
+    icon: Palette,
+    color: "text-purple-600",
+    resources: [
+      {
+        title: "Can I Use",
+        author: "Alexis Deveria",
+        description: "Verificador de compatibilidad de características web entre navegadores",
+        url: "https://caniuse.com/",
+        type: "Tool",
+        rating: 5,
+        tags: ["Compatibilidad", "Frontend"]
+      },
+      {
+        title: "CSS-Tricks",
+        author: "CSS-Tricks",
+        description: "Artículos y tutoriales sobre CSS, diseño web y desarrollo frontend",
+        url: "https://css-tricks.com/",
+        type: "Platform",
+        rating: 5,
+        tags: ["CSS", "Tutoriales"]
+      },
+      {
+        title: "Flexbox Froggy",
+        author: "Codepip",
+        description: "Juego interactivo para aprender CSS Flexbox",
+        url: "https://flexboxfroggy.com/#es",
+        type: "Platform",
+        rating: 4,
+        tags: ["CSS", "Flexbox", "Interactivo"]
+      },
+      {
+        title: "Grid Garden",
+        author: "Codepip",
+        description: "Juego interactivo para aprender CSS Grid",
+        url: "https://cssgridgarden.com/#es",
+        type: "Platform",
+        rating: 4,
+        tags: ["CSS", "Grid", "Interactivo"]
+      },
+      {
+        title: "Font Awesome",
+        author: "Fonticons",
+        description: "Biblioteca de iconos vectoriales para web",
+        url: "https://fontawesome.com/",
+        type: "Tool",
+        rating: 5,
+        tags: ["Iconos", "Frontend"]
+      },
+      {
+        title: "Google Fonts",
+        author: "Google",
+        description: "Biblioteca de fuentes web gratuitas",
+        url: "https://fonts.google.com/",
+        type: "Tool",
+        rating: 5,
+        tags: ["Tipografía", "Diseño"]
+      }
+    ]
+  },
+  {
+    title: "Recursos Backend y APIs",
+    icon: Server,
+    color: "text-orange-600",
+    resources: [
+      {
+        title: "RESTful API Design",
+        author: "Microsoft",
+        description: "Guía de mejores prácticas para diseño de APIs REST",
+        url: "https://learn.microsoft.com/es-es/azure/architecture/best-practices/api-design",
+        type: "Documentation",
+        rating: 5,
+        tags: ["REST", "API", "Diseño"]
+      },
+      {
+        title: "JWT.io",
+        author: "Auth0",
+        description: "Información y herramientas para JSON Web Tokens",
+        url: "https://jwt.io/",
+        type: "Tool",
+        rating: 5,
+        tags: ["Autenticación", "Seguridad"]
+      },
+      {
+        title: "Django REST Framework",
+        author: "Django REST Framework",
+        description: "Framework potente para construir Web APIs con Django",
+        url: "https://www.django-rest-framework.org/",
+        type: "Documentation",
+        rating: 5,
+        tags: ["Django", "REST", "Python"]
+      },
+      {
+        title: "Python.org",
+        author: "Python Software Foundation",
+        description: "Documentación oficial de Python",
+        url: "https://docs.python.org/es/3/",
+        type: "Documentation",
+        rating: 5,
+        tags: ["Python", "Programación"]
+      },
+      {
+        title: "FastAPI",
+        author: "Sebastián Ramírez",
+        description: "Framework moderno y rápido para construir APIs con Python",
+        url: "https://fastapi.tiangolo.com/es/",
+        type: "Documentation",
+        rating: 5,
+        tags: ["Python", "API", "Backend"]
+      }
+    ]
+  },
+  {
+    title: "Práctica y Desafíos",
+    icon: Trophy,
+    color: "text-yellow-600",
+    resources: [
+      {
+        title: "Frontend Mentor",
+        author: "Frontend Mentor",
+        description: "Desafíos de desarrollo frontend con diseños profesionales",
+        url: "https://www.frontendmentor.io/",
+        type: "Platform",
+        rating: 5,
+        tags: ["Frontend", "Práctica", "Diseño"]
+      },
+      {
+        title: "JavaScript30",
+        author: "Wes Bos",
+        description: "30 desafíos de JavaScript en 30 días",
+        url: "https://javascript30.com/",
+        type: "Course",
+        rating: 5,
+        tags: ["JavaScript", "Práctica"]
+      },
+      {
+        title: "Exercism",
+        author: "Exercism",
+        description: "Plataforma de práctica de código con mentores",
+        url: "https://exercism.org/",
+        type: "Platform",
+        rating: 4,
+        tags: ["Práctica", "Múltiples Lenguajes"]
+      },
+      {
+        title: "LeetCode",
+        author: "LeetCode",
+        description: "Plataforma para practicar algoritmos y estructuras de datos",
+        url: "https://leetcode.com/",
+        type: "Platform",
+        rating: 5,
+        tags: ["Algoritmos", "Práctica"]
+      }
+    ]
+  }
+];
+  
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'Book': return BookOpen
