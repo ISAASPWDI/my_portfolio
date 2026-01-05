@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://myportfolio-git-cv-en-isaaspwdis-projects.vercel.app/sitemap.xml

@@ -1,4 +1,3 @@
-import { motion } from "framer-motion"
 import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { Card } from "@/components/ui/card"
@@ -17,7 +16,6 @@ interface ContactFormData {
   message: string
 }
 
-// EMAILJS CONFIGURATION
 const EMAILJS_CONFIG = {
   PUBLIC_KEY: "uv7rGhuC8QRs8Uo79",
   SERVICE_ID: "service_7v8oewe",
@@ -40,18 +38,15 @@ export function ContactForm() {
     setIsSubmitting(true)
 
     try {
-      // Initialize EmailJS with your Public Key
       emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY)
 
-      // ✅ FIXED: Variables matching your template
       const templateParams = {
-        name: data.name, // Matches {{name}} in your template
-        email: data.email, // Matches {{email}} in your template
-        subject: data.subject, // Matches {{subject}} in your template
-        message: data.message, // Matches {{message}} in your template
+        name: data.name,
+        email: data.email,
+        subject: data.subject,
+        message: data.message,
       }
 
-      // Send the email
       const response = await emailjs.send(
         EMAILJS_CONFIG.SERVICE_ID,
         EMAILJS_CONFIG.TEMPLATE_ID,
@@ -62,13 +57,12 @@ export function ContactForm() {
 
       toast({
         title: "Message sent successfully!",
-        description: "Thank you for reaching out. I’ll get back to you soon.",
+        description: "Thank you for reaching out. I'll get back to you soon.",
       })
 
       setIsSubmitted(true)
       reset()
 
-      // Reset success state after 5 seconds
       setTimeout(() => setIsSubmitted(false), 5000)
     } catch (error) {
       console.error("Error sending email:", error)
@@ -86,38 +80,26 @@ export function ContactForm() {
 
   if (isSubmitted) {
     return (
-      <motion.div
-        initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.5 }}
-      >
+      <div className="animate-[scaleIn_0.5s_ease-out]">
         <Card className="card-elevated p-8 text-center">
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-          >
+          <div className="animate-[scaleIn_0.5s_ease-out_0.2s_both]">
             <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
-          </motion.div>
+          </div>
           <h3 className="text-2xl font-bold mb-2 text-gradient">
             Message Sent!
           </h3>
           <p className="text-muted-foreground">
-            Thank you for contacting me. I’ll reply as soon as possible.
+            Thank you for contacting me. I'll reply as soon as possible.
           </p>
         </Card>
-      </motion.div>
+      </div>
     )
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-    >
+    <div className="animate-[fadeInUp_0.8s_ease-out]">
       <Card className="card-elevated p-8">
-        <h3 className="text-2xl font-bold mb-6 text-gradient">Let’s Talk</h3>
+        <h3 className="text-2xl font-bold mb-6 text-gradient">Let's Talk</h3>
 
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
           <div className="grid md:grid-cols-2 gap-4">
@@ -210,6 +192,6 @@ export function ContactForm() {
           </Button>
         </form>
       </Card>
-    </motion.div>
+    </div>
   )
 }
