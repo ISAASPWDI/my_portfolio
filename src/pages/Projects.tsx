@@ -50,6 +50,28 @@ export default function Projects() {
       status: "Completed",
     },
     {
+      title: "AI-Powered COVID-19 Detection System",
+      description:
+        "Medical diagnostic support system that analyzes chest X-ray images using Deep Learning. It integrates the COV-ADSX model into a hospital-oriented architecture, featuring secure doctor authentication, patient management, and real-time generation of diagnostic results with heatmaps for clinical visualization.",
+      image: "/images/projects/covid-detection-app.jpg",
+      technologies: [
+        "React",
+        "Flask",
+        "Python",
+        "TensorFlow",
+        "Keras",
+        "XGBoost",
+        "OpenCV",
+        "MySQL",
+        "JWT",
+        "SQLAlchemy",
+      ],
+      liveUrl: "https://covid-detection-app.netlify.app/", 
+      githubUrl: "https://github.com/tu-usuario/covid-detection-flask-react",
+      date: "2026",
+      status: "Completed",
+    },
+    {
       title: "Educational Empowerment Platform",
       description:
         "Full-stack application developed with Flutter, Node.js, Express.js, and PostgreSQL, following Clean Architecture principles in the backend and secure authentication using Google and JWT.",
@@ -206,7 +228,7 @@ export default function Projects() {
         "Regex",
         "Responsive Design",
       ],
-      liveUrl: "#nosource",
+      liveUrl: "https://personalprojectsaa.netlify.app/",
       githubUrl: "https://github.com/ISAASPWDI/personalProjects",
       date: "2023",
       status: "Completed",
