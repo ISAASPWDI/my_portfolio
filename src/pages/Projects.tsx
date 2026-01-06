@@ -23,7 +23,7 @@ export default function Projects() {
         "GitHub Auth",
       ],
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/ISAASPWDI/studysync-backend",
       date: "2025",
       status: "Completed",
     },
