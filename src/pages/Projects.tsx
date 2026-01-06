@@ -190,7 +190,7 @@ export default function Projects() {
         "Shell Script",
       ],
       liveUrl: "https://notes-app-ensolvers.netlify.app/",
-      githubUrl: "https://github.com/hirelens-challenges/aliaga-cc5641.git",
+      githubUrl: "https://github.com/ISAASPWDI/notes-app-backend",
       date: "2025",
       status: "Completed",
     },
