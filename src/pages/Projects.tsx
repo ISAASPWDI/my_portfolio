@@ -67,7 +67,7 @@ export default function Projects() {
         "SQLAlchemy",
       ],
       liveUrl: "https://covid-detection-app.netlify.app/", 
-      githubUrl: "https://github.com/tu-usuario/covid-detection-flask-react",
+      githubUrl: "https://github.com/ISAASPWDI/covid-detection-backend",
       date: "2026",
       status: "Completed",
     },
