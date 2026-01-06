@@ -110,7 +110,7 @@ export default function About() {
 
         <section className="mb-20 animate-[fadeInUp_0.8s_ease-out_0.2s_both]">
           <Card className="card-elevated p-8 lg:p-12">
-            <h2 className="text-3xl font-bold mb-6 text-gradient">Quién soy</h2>
+            <h2 className="text-3xl font-bold mb-6 text-gradient">Who am I</h2>
             <div className="grid lg:grid-cols-2 gap-8 items-start">
               <div className="space-y-6">
                 <p className="text-lg text-muted-foreground leading-relaxed">
