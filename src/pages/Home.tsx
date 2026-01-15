@@ -85,7 +85,7 @@ export default function Home() {
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" />
                 </Button>
               </Link>
-              <a href="/Stevens_Aliaga.pdf" download="CV_STEVENS_ALIAGA_ARAUCO.pdf">
+              <a href="/CV_ALIAGA_ARAUCO_STEVENS.es.pdf" download="CV_STEVENS_ALIAGA_ARAUCO.es.pdf">
                 <Button variant="outline" className="btn-secondary hover:bg-primary/10 group transition-all duration-300 w-full sm:w-auto">
                   <Download className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform duration-500" />
                   Download CV
