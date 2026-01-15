@@ -10,6 +10,7 @@ import {
   Trophy
 } from "lucide-react"
 import { useTheme } from "@/providers/ThemeProvider"
+import { motion } from "framer-motion"
 
 export default function About() {
   const skills = [
@@ -94,9 +95,144 @@ export default function About() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/30">
-      <div className="container mx-auto px-4 py-20 relative z-10">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/30 relative overflow-hidden">
+      {/* Partículas flotantes con framer-motion */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <motion.div
+          className="absolute top-16 left-8 w-28 h-28 bg-gradient-to-br from-pink-400/30 to-fuchsia-600/35 rounded-full blur-2xl"
+          animate={{
+            rotate: [0, 360],
+            scale: [1, 1.6, 0.6, 1.4, 1],
+            x: [0, 40, -25, 35, 0],
+            y: [0, -30, 25, -20, 0]
+          }}
+          transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
+        />
 
+        <motion.div
+          className="absolute top-44 right-16 w-20 h-20 bg-gradient-to-br from-teal-400/35 to-cyan-600/40 rounded-full blur-xl"
+          animate={{
+            scale: [0.5, 2.2, 1.2, 0.7, 1.5, 0.5],
+            rotate: [200, 20, 380, 200],
+            x: [0, -35, 25, -45, 0],
+            y: [0, 35, -20, 40, 0]
+          }}
+          transition={{ duration: 14, repeat: Infinity, ease: "linear" }}
+        />
+
+        <motion.div
+          className="absolute bottom-36 left-1/5 w-16 h-36 bg-gradient-to-t from-purple-500/25 to-violet-700/35 rounded-full blur-xl"
+          animate={{
+            rotate: [0, 200, 400],
+            scaleY: [1, 1.8, 0.4, 1.5, 1],
+            scaleX: [1, 0.6, 1.5, 1],
+            x: [0, 30, -25, 35, 0],
+            y: [0, -40, 20, -30, 0]
+          }}
+          transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
+        />
+
+        <motion.div
+          className="absolute top-1/4 right-1/4 w-22 h-22 bg-gradient-to-br from-yellow-400/40 to-amber-700/35 rounded-full blur-2xl"
+          animate={{
+            rotate: [0, -400, -800],
+            scale: [1, 0.4, 2, 1, 1],
+            x: [0, 50, -30, 45, 0],
+            y: [0, 30, -40, 35, 0]
+          }}
+          transition={{ duration: 22, repeat: Infinity, ease: "easeOut" }}
+        />
+
+        <motion.div
+          className="absolute top-64 left-1/2 w-32 h-10 bg-gradient-to-r from-emerald-500/30 to-green-700/35 rounded-full blur-xl"
+          animate={{
+            rotate: [0, 110, 200, 290, 400],
+            scaleX: [1, 0.2, 2.2, 0.9, 1],
+            scaleY: [1, 1.8, 1, 1.5, 1],
+            x: [0, -60, 40, -50, 0],
+            y: [0, 50, -30, 45, 0]
+          }}
+          transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
+        />
+
+        <motion.div
+          className="absolute bottom-16 right-8 w-24 h-24 bg-gradient-to-br from-red-500/30 to-rose-700/35 rounded-full blur-2xl"
+          animate={{
+            scale: [0.6, 1.9, 1.3, 0.8, 0.6],
+            rotate: [60, 420, 240, 600, 60],
+            x: [0, -40, 30, -25, 0],
+            y: [0, 25, -35, 20, 0]
+          }}
+          transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
+        />
+
+        <motion.div
+          className="absolute top-8 left-2/5 w-14 h-14 bg-gradient-to-br from-slate-500/30 to-blue-600/35 rounded-full blur-xl"
+          animate={{
+            scale: [1.4, 0.4, 1.6, 0.7, 1.4],
+            rotate: [0, 320, 160, 500, 760],
+            x: [0, 35, -30, 40, 0],
+            y: [0, -25, 35, -15, 0]
+          }}
+          transition={{ duration: 13, repeat: Infinity, ease: "easeOut" }}
+        />
+
+        <motion.div
+          className="absolute bottom-56 left-16 w-12 h-28 bg-gradient-to-t from-orange-500/25 to-pink-700/35 rounded-full blur-xl"
+          animate={{
+            rotate: [100, 280, 460, 640, 820],
+            scaleY: [1, 1.6, 0.5, 1.3, 1],
+            scaleX: [1, 0.7, 1.4, 1],
+            x: [0, 25, -35, 20, 0],
+            y: [0, 30, -25, 40, 0]
+          }}
+          transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+        />
+
+        <motion.div
+          className="absolute top-28 right-1/5 w-10 h-10 bg-gradient-to-br from-teal-600/40 to-emerald-700/35 rounded-full blur-lg"
+          animate={{
+            scale: [1, 1.5, 0.8, 1.3, 1],
+            x: [0, 25, -15, 30, 0],
+            y: [0, -20, 30, -25, 0]
+          }}
+          transition={{ duration: 11, repeat: Infinity, ease: "easeInOut" }}
+        />
+
+        <motion.div
+          className="absolute bottom-28 right-1/4 w-12 h-12 bg-gradient-to-br from-indigo-600/35 to-purple-700/40 rounded-full blur-lg"
+          animate={{
+            rotate: [0, 200, 400],
+            scale: [1, 0.5, 1.4, 1],
+            x: [0, -30, 20, -25, 0],
+            y: [0, 35, -25, 30, 0]
+          }}
+          transition={{ duration: 12, repeat: Infinity, ease: "easeOut" }}
+        />
+
+        <motion.div
+          className="absolute top-1/3 left-1/6 w-6 h-6 bg-gradient-to-br from-cyan-600/45 to-blue-800/40 rounded-full blur-md"
+          animate={{
+            scale: [0.7, 1.3, 0.9, 1.1, 0.7],
+            x: [0, 15, -12, 18, 0],
+            y: [0, -12, 20, -18, 0]
+          }}
+          transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
+        />
+
+        <motion.div
+          className="absolute top-20 left-10 w-24 h-24 bg-gradient-to-br from-blue-400/30 to-purple-600/30 rounded-full blur-xl"
+          animate={{
+            rotate: [0, 360],
+            scale: [1, 1.5, 0.7, 1.3, 1],
+            x: [0, 35, -20, 30, 0],
+            y: [0, -25, 20, -15, 0]
+          }}
+          transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
+        />
+      </div>
+
+      <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="text-center mb-16 animate-[fadeInUp_0.8s_ease-out]">
           <h1 className="text-5xl lg:text-6xl font-bold mb-6">
             <span className="text-gradient">About Me</span>
@@ -110,7 +246,7 @@ export default function About() {
 
         <section className="mb-20 animate-[fadeInUp_0.8s_ease-out_0.2s_both]">
           <Card className="card-elevated p-8 lg:p-12">
-            <h2 className="text-3xl font-bold mb-6 text-gradient">Quién soy</h2>
+            <h2 className="text-3xl font-bold mb-6 text-gradient">Who am I</h2>
             <div className="grid lg:grid-cols-2 gap-8 items-start">
               <div className="space-y-6">
                 <p className="text-lg text-muted-foreground leading-relaxed">
